@@ -1,0 +1,13 @@
+{
+  "name": "bayesarew",
+  "version": "1.0.0",
+  "description": "Sito web per il villaggio",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "Quarto Raggio",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
