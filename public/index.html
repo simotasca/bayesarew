@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="it" prefix="og: https://ogp.me/ns#">
 
 <head>
@@ -7,17 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baye Sa Rew</title>
   <meta name="description" content="Aiutaci a promuovere lo sviluppo del villaggio Baye Sa Rew in Senegal." />
-  <!-- Open Graph social media shit -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Baye Sa Rew" />
   <meta property="og:url" content="http://www.bayesarew.com/" />
   <meta property="og:description" content="Aiutaci a promuovere lo sviluppo del villaggio Baye Sa Rew in Senegal." />
   <meta property="og:image" content="./resources/img/opengraph.png" />
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link rel="font" href="./resources/font/CooperHewitt-Medium.otf" type="font/otf" >
+  <link rel="font" href="./resources/font/CooperHewitt-MediumItalic.otf" type="font/otf" >
   <!-- CSS -->
   <link rel="stylesheet" href="./css/index.min.css">
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/TextPlugin.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/TextPlugin.min.js"></script> -->
 </head>
 
 <body>
@@ -28,34 +35,33 @@
     <img class="logo" src="./resources/img/logo2.svg" alt="logo">
     <!-- <img class="logo" src="./resources/img/logo-alex.svg" alt="logo"> -->
 
-    <nav class="menu">
+    <nav class="menu show-on-load">
       <a class="menu-item">HOME</a>
       <a class="menu-item">CHI SIAMO</a>
       <a class="menu-item">PROGETTI</a>
     </nav>
 
-    <div class="hero">
+    <div class="hero show-on-load">
       <h1 class="title">BAYE SA REW</h1>
       <h2 class="subtitle">COLTIVA LA TUA TERRA</h2>
       <div class="carousel">
-        <div class="carousel--img"><img src="resources/img/uomini_seduti.jpg" alt="uomini seduti" loading="lazy" /></div>
-        <div class="carousel--img"><img src="resources/img/donna_seduta.jpg" alt="boh" loading="lazy"/></div>
-        <div class="carousel--img"><img src="resources/img/due_lavoratori.jpg" alt="boh" loading="lazy"/></div>
+        <div class="carousel--img"><img src="resources/img/uomini_seduti.jpg" alt="uomini seduti" loading="lazy" />
+        </div>
+        <div class="carousel--img"><img src="resources/img/donna_seduta.jpg" alt="boh" loading="lazy" /></div>
+        <div class="carousel--img"><img src="resources/img/due_lavoratori.jpg" alt="boh" loading="lazy" /></div>
       </div>
     </div>
 
-    <div class="main-dona">
+    <div class="main-dona show-on-load">
       <h2>
-        <a href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank">
-          DONA
-        </a>
+        <a href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank">DONA</a>
       </h2>
     </div>
   </section>
 
   <section class="dona-container">
     <img class="background-logo" src="./resources/img/impronta-africa.svg" alt="" loading="lazy" />
-    
+
     <header class="dona-header">
       <div><img src="./resources/img/logo3.svg" alt="logo" loading="lazy" /></div>
       <!-- <div><img src="./resources/img/logo-alex.svg" alt="logo" /></div> -->
@@ -75,9 +81,11 @@
         <div class="w-30">
           <div class="aiutaci-p h5">
             <div class="left-in">
-              Contribuisci ad aiutare le persone del <span class="text-l-blue">villaggio</span>
-              senegalese "Gapassel", con la <span class="text-yellow">buona volontà</span>: puoi
-              partecipare a diversi progetti sociali e umanitari, anche solo con una piccola donazione.
+              <i>
+                Contribuisci ad aiutare le persone del <span class="text-l-blue">villaggio</span>
+                senegalese "Gapassel", con la <span class="text-yellow">buona volontà</span>: puoi
+                partecipare a diversi progetti sociali e umanitari, anche solo con una piccola donazione.
+              </i>
             </div>
           </div>
         </div>
@@ -92,9 +100,11 @@
         <div class="w-50">
           <div class="aiutaci-p-2 h5">
             <div class="right-in">
-              Questi sono i <span class="text-l-blue">bambini</span> del villaggio che si allenano a calcio, sulla
-              sabbia, senza scarpe e senza strutture protettive. <span class="text-yellow">Contribuisci</span> al
-              successo della squadra "amici nel pallone" attraverso una donazione.
+              <i>
+                Questi sono i <span class="text-l-blue">bambini</span> del villaggio che si allenano a calcio, sulla
+                sabbia, senza scarpe e senza strutture protettive. Contribuisci al successo della squadra
+                <span class="text-yellow">"Matar Diouf"</span> attraverso una donazione.
+              </i>
             </div>
           </div>
         </div>
@@ -207,6 +217,7 @@
   </section>
 </body>
 
+<script src="./js/showOnLoad.js"></script>
 <script>
   function pxStringToInt(str) {
     return parseInt(str.substring(0, str.length - 2));
@@ -220,20 +231,18 @@
     carousel.style.width = width + "px";
   }
 
-  var impronta = document.getElementById("main-impronta")
   window.addEventListener("load", () => {
 
     resizeCarousel();
 
-    var svgDoc = impronta.contentDocument;
+    var svgDoc = document.getElementById("main-impronta").contentDocument;
     // HOMAPAGE ANIMATION
     var tl = gsap.timeline();
     tl.to('.carousel--img', { autoAlpha: 1, stagger: .2, duration: 1.5, delay: 1.5 });
     gsap.to(svgDoc.getElementsByClassName('st0'), { autoAlpha: 1, duration: .4, stagger: -.05, delay: -.5 });
   });
 
-  window.addEventListener("resize", resizeCarousel)
-
+  window.addEventListener("resize", resizeCarousel);
 
   // SCROLL TRIGGER
   gsap.fromTo('.left-in',
@@ -243,6 +252,7 @@
       ease: "power2.out",
       scrollTrigger: {
         trigger: '.left-in',
+        // start/end: 'trigger viewport'
         start: 'top bottom', end: '+=50%',
       }
     });
@@ -254,47 +264,10 @@
       ease: "power2.out",
       scrollTrigger: {
         trigger: '.right-in',
+        // start/end: 'trigger viewport'
         start: 'top bottom', end: '+=50%',
       }
     });
-
-    // gsap.fromTo('.left-in2',
-    //   { x: -25, opacity: 0 },
-    //   {
-    //     x: 0, opacity: 1,
-    //     ease: "power2.out",
-    //     scrollTrigger: {
-    //       trigger: '.left-in2',
-    //       // start-end: 'element viewport'
-    //       start: 'top bottom-=20%',
-    //       end: 'top top+=60%',
-    //     }
-    //   });
-
-    // gsap.fromTo('.right-in2',
-    //   { x: 25, opacity: 0 },
-    //   {
-    //     x: 0, opacity: 1,
-    //     ease: "power2.out",
-    //     scrollTrigger: {
-    //       trigger: '.right-in2',
-    //       // start-end: 'element viewport'
-    //       start: 'top bottom-=20%',
-    //       end: 'top top+=60%'
-    //     }
-    //   });
-
-    // gsap.fromTo('.background-logo-foto',
-    //   { y: '0%' },
-    //   {
-    //     y: '100%',
-    //     ease: "none",
-    //     scrollTrigger: {
-    //       trigger: '.foto-container',
-    //       start: 'top bottom',
-    //       scrub: true, markers: true
-    //     }
-    //   })
 </script>
 
 </html>

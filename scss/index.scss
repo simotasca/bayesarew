@@ -3,7 +3,7 @@
 .main-container {
   height: 100%;
   width: 100%;
-  background-image: url('../resources/img/schiena.jpg');
+  background-image: url('../resources/img/schiena.webp');
   background-position: 70% 70%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -329,6 +329,7 @@ $factor: 1;
     width: 100%;
     height: $height;
     border-left: 0.2rem solid #ebad04;
+    z-index: -1;
   }
   padding-left: 0.8rem;
 }
