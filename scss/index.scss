@@ -1,4 +1,9 @@
 @import 'base.scss';
+@import 'show-on-load.scss';
+
+$yellow: #ebad04;
+$light-blue: #74bcf2;
+
 
 .main-container {
   height: 100%;
@@ -147,7 +152,7 @@ $factor: 1;
   right: 0;
   margin-right: -2rem;
   padding: 0.4rem 3.5rem 0.4rem 0.8rem;
-  background: #ebad04;
+  background: $yellow;
   box-shadow: #00000080 0 0.2rem 10px;
 
   cursor: pointer;
@@ -304,11 +309,11 @@ $factor: 1;
 }
 
 .text-l-blue {
-  color: #74bcf2;
+  color: $light-blue;
 }
 
 .text-yellow {
-  color: #ebad04;
+  color: $yellow;
 }
 
 .font-regular {
@@ -328,7 +333,7 @@ $factor: 1;
     left: 0;
     width: 100%;
     height: $height;
-    border-left: 0.2rem solid #ebad04;
+    border-left: 0.2rem solid $yellow;
     z-index: -1;
   }
   padding-left: 0.8rem;
@@ -375,8 +380,8 @@ $factor: 1;
 }
 
 .btn-yellow {
-  background-color: #ebad04;
-  border-color: #ebad04;
+  background-color: $yellow;
+  border-color: $yellow;
   color: white;
   font-family: 'Montserrat';
   font-weight: 600 !important;
@@ -384,7 +389,7 @@ $factor: 1;
 
 .btn-outline {
   background-color: transparent;
-  border-color: #ebad04;
+  border-color: $yellow;
   color: white;
   font-weight: 400 !important;
 }
@@ -442,7 +447,7 @@ $factor: 1;
 .la-line {
   content: '';
   flex: 1;
-  border-bottom: 0.15rem solid #ebad04;
+  border-bottom: 0.15rem solid $yellow;
   width: 100%;
   margin: 0 1rem 1.3rem -2rem;
   // shado
