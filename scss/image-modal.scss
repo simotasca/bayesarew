@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+$modal-overlay-z: 1;
+$modal-z: 2;
+$width: 80%;
+$height: 90%;
+$enter-duration: 0.3s;
+
+#img-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(54, 54, 54);
+  background-color: rgba(0, 0, 0, 0.5);
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0s .5s;
+
+  z-index: 5;
+}
+
+#img-modal.img-modal--open {
+  visibility: visible;
+  opacity: 1;
+
+  transition: opacity 0.3s, visibility 0s;
+}
+
+#img-modal__content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    transform: translateY(-50px);
+    transition: transform .5s;
+  }
+}
+
+.img-modal--open #img-modal__content img {
+  transform: translateY(0px);
+}
+
+html.modal-is-open {
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
