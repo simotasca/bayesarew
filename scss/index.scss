@@ -6,12 +6,14 @@ $yellow: #ebad04;
 $light-blue: #74bcf2;
 
 .main-container {
+  position: relative;
   height: 100%;
   width: 100%;
-  background-image: url('../resources/img/schiena.webp');
-  background-position: 70% 70%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url('../resources/img/schiena.webp');
+  // background-position: 70% 70%;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  overflow: hidden;
 
   .menu {
     position: absolute;
@@ -22,6 +24,15 @@ $light-blue: #74bcf2;
   .menu-item:hover {
     text-shadow: rgba(0, 0, 0, 0.712) 0 0.4rem 0.2rem, rgba(255, 255, 255, 0.966) 0 0rem 1rem;
   }
+}
+
+.main-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0;
+  object-fit: cover;
 }
 
 .main-impronta {
