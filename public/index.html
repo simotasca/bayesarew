@@ -28,7 +28,7 @@
 
 <body>
 
-  <section class="main-container">
+  <section class="main-container" onload="mainOnLoad">
     <img class="main-background" src="./resources/img/schiena.webp" alt="schiena" />
     <object id="main-impronta" class="main-impronta" type="image/svg+xml" data="resources/img/impronta.svg"></object>
 
@@ -248,7 +248,7 @@
     carousel.style.width = width + "px";
   }
 
-  window.addEventListener("load", () => {
+  function mainOnLoad() {
     document.getElementsByClassName("carousel")[0].classList.add("carousel--visible");
     
     resizeCarousel();
@@ -258,7 +258,7 @@
     var tl = gsap.timeline();
     tl.to('.carousel--img', { autoAlpha: 1, stagger: .2, duration: 1.5, delay: 1.5 });
     gsap.to(svgDoc.getElementsByClassName('st0'), { autoAlpha: 1, duration: .4, stagger: -.05, delay: -.5 });
-  });
+  };
 
   window.addEventListener("resize", resizeCarousel);
 
