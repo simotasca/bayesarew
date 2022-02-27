@@ -14,6 +14,7 @@ var loadCSS = function (url, callback) {
 }
 
 loadCSS("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@700&display=swap", link => {
+  console.log("fonts loaded");
   Array.from(document.getElementsByClassName('show-on-load')).forEach(function (element) {
     element.classList.remove('show-on-load');
   });
