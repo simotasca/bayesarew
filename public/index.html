@@ -29,7 +29,7 @@
 <body>
 
   <section class="main-container">
-    <img class="main-background" src="./resources/img/schiena.webp" alt="schiena" load="lazy" />
+    <img class="main-background" src="./resources/img/schiena.webp" alt="schiena" />
     <object id="main-impronta" class="main-impronta" type="image/svg+xml" data="resources/img/impronta.svg"></object>
 
     <img class="logo" src="./resources/img/logo2.svg" alt="logo">
@@ -107,7 +107,7 @@
           </div>
         </div>
         <div class="w-50 video video-container">
-          <video class="w-100" src="./resources/video/giocano_sulla_sabbia.mp4" autoplay muted loop loading="lazy"></video>
+          <video class="w-100" src="./resources/video/giocano_sulla_sabbia.mp4" autoplay loop muted playsinline loading="lazy"></video>
         </div>
       </div>
     </div>
@@ -249,7 +249,8 @@
   }
 
   window.addEventListener("load", () => {
-    document.getElementsByClassName("carousel")[0].classList.add("carousel--visible")
+    document.getElementsByClassName("carousel")[0].classList.add("carousel--visible");
+    
     resizeCarousel();
 
     var svgDoc = document.getElementById("main-impronta").contentDocument;
