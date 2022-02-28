@@ -72,7 +72,7 @@
     <div class="dona-content">
       <div class="flex p-2 pt-0 g-1">
         <div class="w-70">
-          <img class="w-100" src="./resources/img/foto/bambini.jpg" alt="bambini" loading="lazy" />
+          <img class="w-100" src="./resources/img/foto/bambini.jpg" alt="bambini" />
         </div>
         <div class="w-30">
           <div class="aiutaci-p h5">
@@ -263,7 +263,7 @@
 
   function waitBeforeMainAnimation() {
     let promises = [];
-   
+
     promises.push(new Promise(function (resolve) {
       document.getElementById("main-impronta").addEventListener("load", () => {
         logoPosition(true);
@@ -280,7 +280,7 @@
         image.onload = resolve;
       }));
     });
-    
+
     Promise.all(promises).then(function () {
       mainAnimation();
     });
@@ -315,32 +315,36 @@
       logoPosition();
       resizeCarousel();
     });
+
+
+    // SCROLL TRIGGER
+    gsap.fromTo('.left-in',
+      { x: '-100%', opacity: .2 },
+      {
+        x: 0, opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          // markers: true,
+          trigger: '.left-in',
+          // start/end: 'trigger viewport'
+          start: 'top bottom'
+        }
+      });
+
+    gsap.fromTo('.right-in',
+      { x: '100%', opacity: .2 },
+      {
+        x: 0, opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: '.right-in',
+          // start/end: 'trigger viewport'
+          start: 'top bottom', end: '+=50%',
+        }
+      });
   })();
 
-  // SCROLL TRIGGER
-  gsap.fromTo('.left-in',
-    { x: '-100%', opacity: .2 },
-    {
-      x: 0, opacity: 1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: '.left-in',
-        // start/end: 'trigger viewport'
-        start: 'top bottom', end: '+=50%',
-      }
-    });
 
-  gsap.fromTo('.right-in',
-    { x: '100%', opacity: .2 },
-    {
-      x: 0, opacity: 1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: '.right-in',
-        // start/end: 'trigger viewport'
-        start: 'top bottom', end: '+=50%',
-      }
-    });
 </script>
 
 </html>
