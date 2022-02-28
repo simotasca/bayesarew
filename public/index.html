@@ -14,31 +14,23 @@
   <meta property="og:description" content="Aiutaci a promuovere lo sviluppo del villaggio Baye Sa Rew in Senegal.">
   <meta property="og:image" content="./resources/img/opengraph.png">
   <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
-  <link rel="font" href="./resources/font/CooperHewitt-Medium.otf" type="font/otf">
-  <link rel="font" href="./resources/font/CooperHewitt-MediumItalic.otf" type="font/otf">
+  <link rel="preload" href="./resources/font/oswald/oswald-v47-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <!-- CSS -->
   <link rel="stylesheet" href="./css/index.min.css">
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-  <script>
-    function mainOnLoad() {
-      document.getElementsByClassName("carousel")[0].classList.add("carousel--visible");
-      resizeCarousel();
-    }
-  </script>
 </head>
 
 <body>
 
-  <section class="main-container" onload="mainOnLoad">
-    <img class="main-background" src="./resources/img/foto/schiena.jpg" alt="" />
+  <section class="main-container">
+    <!-- <img id="main-background" src="./resources/img/foto/schiena.jpg" alt="" /> -->
+    <img id="main-background" alt="" />
     <object id="main-impronta" class="main-impronta" type="image/svg+xml" data="resources/img/impronta.svg"></object>
 
-    <img class="logo" src="./resources/img/logo2.svg" alt="logo">
+    <img id="main-logo" class="logo" src="./resources/img/logo2.svg" alt="logo">
+    <div id="logo-check" class="logo"></div>
 
     <nav class="menu">
       <a class="menu-item">HOME</a>
@@ -50,9 +42,9 @@
       <h1 class="title">BAYE SA REW</h1>
       <h2 class="subtitle">COLTIVA LA TUA TERRA</h2>
       <div class="carousel">
-        <div class="carousel--img"><img class="img-modal__toggler" src="resources/img/foto/uomini_seduti.jpg" alt="uomini seduti" loading="lazy" /></div>
-        <div class="carousel--img"><img class="img-modal__toggler" src="resources/img/foto/donna_seduta.jpg" alt="boh" loading="lazy" /></div>
-        <div class="carousel--img"><img class="img-modal__toggler" src="resources/img/foto/due_lavoratori.jpg" alt="boh" loading="lazy" /></div>
+        <div class="carousel__img"><img class="img-modal__toggler" src="resources/img/foto/uomini_seduti.jpg" alt="uomini seduti" loading="lazy" /></div>
+        <div class="carousel__img"><img class="img-modal__toggler" src="resources/img/foto/donna_seduta.jpg" alt="boh" loading="lazy" /></div>
+        <div class="carousel__img"><img class="img-modal__toggler" src="resources/img/foto/due_lavoratori.jpg" alt="boh" loading="lazy" /></div>
       </div>
     </div>
 
@@ -102,7 +94,7 @@
       </div>
       <div class="flex flex-sm-reverse p-2 g-1">
         <div class="w-50">
-          <div class="aiutaci-p-2 h5">
+          <div class="aiutaci-p aiutaci-p-2 h5">
             <div class="right-in">
               <i>
                 Questi sono i <span class="text-l-blue">bambini</span> del villaggio che si allenano a calcio, sulla
@@ -253,16 +245,10 @@
     carousel.style.width = width + "px";
   }
 
-  window.addEventListener("load", () => {
-    document.getElementsByClassName("carousel")[0].classList.add("carousel--visible");
-
-    resizeCarousel();
-
+  function mainAnimation() {
     let svgDoc = document.getElementById("main-impronta").contentDocument;
-    // HOMAPAGE ANIMATION
-    gsap.to('.carousel--img', { autoAlpha: 1, stagger: .2, duration: 1.5, delay: 1.5 });
+    gsap.to('.carousel__img', { autoAlpha: 1, stagger: .2, duration: 1.5, delay: 1.5 });
     gsap.to(svgDoc.getElementsByClassName('st0'), { autoAlpha: 1, duration: .4, stagger: -.05, delay: -.5 });
-
 
     let dona = document.querySelector('.main-dona');
     let tl = gsap.timeline()
@@ -270,11 +256,66 @@
       .to(dona, { x: "0", duration: .2, ease: "power2.out" }, "+=.25");
 
     let hover = gsap.to(dona, { x: "-2rem", duration: .15, ease: "sine.out", paused: true });
+
     dona.addEventListener("mouseenter", () => hover.play());
     dona.addEventListener("mouseleave", () => hover.reverse());
-  });
+  }
 
-  window.addEventListener("resize", resizeCarousel);
+  function waitBeforeMainAnimation() {
+    let promises = [];
+   
+    promises.push(new Promise(function (resolve) {
+      document.getElementById("main-impronta").addEventListener("load", () => {
+        logoPosition(true);
+        resolve();
+      });
+    }));
+    promises.push(new Promise(function (resolve) {
+      document.getElementById("main-background").onload = resolve;
+    }));
+    document.getElementById("main-background").src = "./resources/img/foto/schiena.jpg"; // le altre sono lazy quindi spero vadano sempre?
+
+    Array.from(document.querySelectorAll(".carousel__img img")).forEach(image => {
+      promises.push(new Promise(function (resolve) {
+        image.onload = resolve;
+      }));
+    });
+    
+    Promise.all(promises).then(function () {
+      mainAnimation();
+    });
+  }
+
+  function logoPosition(first = false) {
+    let impronta = document.getElementById('main-impronta');
+    let logoCheck = document.getElementById('logo-check');
+    let logo = document.getElementById('main-logo');
+
+    let impPos = impronta.getBoundingClientRect();
+    let logoPos = logoCheck.getBoundingClientRect();
+
+    let spread = window.innerHeight * 0.03;
+
+    if (logoPos.right > impPos.left + spread) {
+      logo.classList.add("logo--on-overlap");
+    } else {
+      logo.classList.remove("logo--on-overlap");
+    }
+
+    if (first) {
+      logo.classList.add("logo--visible")
+    }
+  }
+
+  (function () {
+    waitBeforeMainAnimation();
+    resizeCarousel();
+    document.getElementsByClassName("carousel")[0].classList.add("carousel--visible");
+    window.addEventListener("resize", () => {
+      logoPosition();
+      resizeCarousel();
+    });
+  })();
 
   // SCROLL TRIGGER
   gsap.fromTo('.left-in',
