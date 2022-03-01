@@ -4,7 +4,7 @@
   "description": "Sito web per il villaggio",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node app.js"
   },
   "author": "Quarto Raggio",
   "dependencies": {
