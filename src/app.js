@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static('public'));
 
 function sendPage(res, page) {
-  res.sendFile(path.join(__dirname, "..", "public", page));
+  res.sendFile(path.join(__dirname, page));
 }
 
 // routes
