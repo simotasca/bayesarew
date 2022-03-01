@@ -4,10 +4,18 @@ const path = require('path');
 const app = express();
 app.use(express.static('public'));
 
+function sendPage(res, page) {
+  res.sendFile(path.join(__dirname, "..", "public", page));
+}
+
 // routes
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  sendPage(res, "index.html");
 });
+app.get('/comingsoon', function (req, res) {
+  sendPage(res, "comingSoon.html");
+});
+
 
 // error handling
 app.use((err, req, res, next) => {

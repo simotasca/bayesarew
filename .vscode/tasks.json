@@ -7,6 +7,13 @@
       "command": "sass --watch ./scss/index.scss:./public/css/index.min.css --style compressed",
       "problemMatcher": [],
       "group": "build"
+    },
+    {
+      "label": "Sass Compile ComingSoon",
+      "type": "shell",
+      "command": "sass --watch ./scss/comingsoon.scss:./public/css/comingsoon.min.css --style compressed",
+      "problemMatcher": [],
+      "group": "build"
     }
   ]
 }
