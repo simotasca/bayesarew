@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static('public'));
 
 function sendPage(res, page) {
-  res.sendFile(path.join(__dirname, page));
+  res.sendFile(path.join(__dirname, "..", "public", "pages", page));
 }
 
 // routes
@@ -13,8 +13,7 @@ app.get('/', function (req, res) {
   sendPage(res, "index.html");
 });
 app.get('/comingsoon', function (req, res) {
-  res.send("<h1>COMINGSOON</h1>");
-  // sendPage(res, "comingSoon.html");
+  sendPage(res, "comingsoon.html");
 });
 
 
