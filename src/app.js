@@ -13,7 +13,8 @@ app.get('/', function (req, res) {
   sendPage(res, "index.html");
 });
 app.get('/comingsoon', function (req, res) {
-  sendPage(res, "comingSoon.html");
+  res.send("<h1>COMINGSOON</h1>");
+  // sendPage(res, "comingSoon.html");
 });
 
 
