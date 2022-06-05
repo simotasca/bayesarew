@@ -335,6 +335,7 @@
 .aiutaci-p {
   color: white;
   overflow: hidden;
+  padding-top: .05rem;
   text-shadow: black 0 0.2rem 3px;
   @include leftBorder(50%);
 }
@@ -449,6 +450,13 @@ $photo-gap: 1rem;
     transition: opacity 150ms;
 
     &:hover {
+      opacity: 1;
+      box-shadow: rgba(255, 255, 255, 0.418) 0 0 20px;
+    }
+  }
+
+  &.img-elem--active {
+    img {
       opacity: 1;
       box-shadow: rgba(255, 255, 255, 0.418) 0 0 20px;
     }

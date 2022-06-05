@@ -12,6 +12,9 @@ function sendPage(res, page) {
 app.get('/', function (req, res) {
   sendPage(res, "index.html");
 });
+app.get('/progetti', function (req, res) {
+  sendPage(res, "progetti.html");
+});
 app.get('/comingsoon', function (req, res) {
   sendPage(res, "comingsoon.html");
 });

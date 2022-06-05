@@ -35,11 +35,11 @@
     <nav class="menu">
       <a class="menu-item">HOME</a>
       <a class="menu-item" href="/comingsoon">CHI SIAMO</a>
-      <a class="menu-item" href="/comingsoon">PROGETTI</a>
+      <a class="menu-item" href="/progetti">PROGETTI</a>
     </nav>
 
     <div class="hero">
-      <h1 class="title">BAYE SA REW</h1>
+      <h1 class="title">BAYE <br> SA REW</h1>
       <h2 class="subtitle">COLTIVA LA TUA TERRA</h2>
       <div class="carousel">
         <div class="carousel__img"><img class="img-modal__toggler" src="resources/img/foto/uomini_seduti.jpg" alt="uomini seduti" loading="lazy" /></div>
@@ -73,7 +73,7 @@
       <nav class="menu">
         <a class="menu-item">HOME</a>
         <a class="menu-item" href="/comingsoon">CHI SIAMO</a>
-        <a class="menu-item" href="/comingsoon">PROGETTI</a>
+        <a class="menu-item" href="/progetti">PROGETTI</a>
       </nav>
       <h2 class="montserrat m-0"><span class="text-yellow">Aiutaci</span> ad Aiutare</h2>
     </header>
@@ -96,7 +96,7 @@
         </div>
       </div>
       <div class="align-center">
-        <a class="btn btn-outline h5" href="/comingsoon">
+        <a class="btn btn-outline h5" href="/progetti">
           PROGETTI
         </a>
         <a class="btn btn-yellow h5" href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank">
@@ -128,7 +128,7 @@
     <nav class="menu">
       <a class="menu-item">HOME</a>
       <a class="menu-item" href="/comingsoon">CHI SIAMO</a>
-      <a class="menu-item" href="/comingsoon">PROGETTI</a>
+      <a class="menu-item" href="/progetti">PROGETTI</a>
     </nav>
 
     <div class="flex my-2">
@@ -138,7 +138,7 @@
 
     <div class="photo-columns">
       <div class="double-col">
-        <div class="elem img-elem">
+        <div class="elem img-elem img-elem--active">
           <img class="img-modal__toggler w-100" src="./resources/img/foto/convivio.jpg" alt="" loading="lazy">
         </div>
         <div class="elem hide-on-desktop">
@@ -232,7 +232,7 @@
           <span class="text-yellow">Simone</span>:
           <a href="tel:+393714820379" style="white-space: nowrap;">+39 371 4820379</span>
         </p>
-        <p>bayesarew.coop@gmail.com</p>
+        <p><a href="mailto:bayesarew.coop@gmail.com">bayesarew.coop@gmail.com</a></p>
       </div>
       <div class="contacts-col w-50">
         <h2>Seguici</h2>
@@ -251,6 +251,7 @@
       </div>
     </div>
   </section>
+
 </body>
 
 <script src="./js/imageModal.js"></script>
@@ -286,24 +287,26 @@
   function waitBeforeMainAnimation() {
     let promises = [];
 
-    promises.push(new Promise(function (resolve) {
+    promises.push(new Promise(resolve => {
       document.getElementById("main-impronta").addEventListener("load", () => {
         logoPosition(true);
         resolve();
       });
     }));
-    promises.push(new Promise(function (resolve) {
+
+    promises.push(new Promise(resolve => {
       document.getElementById("main-background").onload = resolve;
     }));
+
     document.getElementById("main-background").src = "./resources/img/foto/schiena.jpg"; // le altre sono lazy quindi spero vadano sempre?
 
     Array.from(document.querySelectorAll(".carousel__img img")).forEach(image => {
-      promises.push(new Promise(function (resolve) {
+      promises.push(new Promise(resolve => {
         image.onload = resolve;
       }));
     });
 
-    Promise.all(promises).then(function () {
+    Promise.all(promises).then(() => {
       mainAnimation();
     });
   }
@@ -333,6 +336,7 @@
     waitBeforeMainAnimation();
     resizeCarousel();
     document.getElementsByClassName("carousel")[0].classList.add("carousel--visible");
+    
     window.addEventListener("resize", () => {
       logoPosition();
       resizeCarousel();

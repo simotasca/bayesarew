@@ -1,0 +1,551 @@
+@import 'fonts.scss';
+@import 'common.scss';
+@import 'image-modal.scss';
+
+p {
+  font-weight: 500;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.img-fluid {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.spacer {
+  height: 5rem;
+}
+
+.text-shadow {
+  text-shadow: -0.2rem 0.25rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.btn-dark {
+  background-color: $yellow;
+  border-color: #202020;
+  color: #202020;
+  font-family: 'Montserrat';
+  font-weight: 600 !important;
+
+  &:hover {
+    color: white;
+    border-color: white;
+    background-color: #202020;
+  }
+}
+
+.full-bg {
+  @include darkGradientBackground();
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#main-column {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: url('../resources/img/piantina.jpg');
+  background-position: center;
+  background-size: auto;
+}
+
+.split {
+  display: flex;
+  gap: 1rem;
+  & > div {
+    width: 50%;
+  }
+}
+.strip-container {
+  position: relative;
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.strip {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  // z-index: -1;
+}
+
+.strip--left {
+  right: 0;
+}
+
+.strip--right {
+  left: 0;
+}
+
+.strip--yellow {
+  background: $yellow;
+}
+
+.strip--blue {
+  // background: darken($light-blue, 20);
+  // background: #1a60e2;
+  background: #4da1a9;
+  background: #3c91e6;
+}
+
+.half {
+  max-width: 500px;
+
+  &.half--right {
+    margin-right: auto;
+  }
+
+  &.half--left {
+    margin-left: auto;
+  }
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-bottom: max(14vw, 140px);
+  margin-right: 2rem;
+  img {
+    height: 4rem;
+  }
+}
+
+.menu-item:hover {
+  color: #ebb521c4;
+}
+
+header {
+  .strip-container h1 {
+    position: absolute;
+    bottom: 0;
+    right: max(-41vw, -410px);
+    font-size: min(10vw, 100px);
+    font-family: 'Oswald';
+    font-weight: 700;
+    white-space: nowrap;
+    text-shadow: #0000005d -0.8rem -0.2rem 11px;
+  }
+
+  .menu {
+    justify-content: end;
+    margin-top: 2rem;
+  }
+}
+
+#main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  // height: auto;
+  display: block;
+}
+
+.menu-item {
+  display: inline-block;
+  margin: 0 1.1rem;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  color: #ffffffcc;
+  cursor: pointer;
+  text-shadow: rgba(0, 0, 0, 0.966) 0 0.2rem 0.3rem;
+
+  transition: transform 0.2s, text-shadow 0.2s;
+}
+
+a.menu-item:hover {
+  transform: translateY(-0.2rem);
+  text-shadow: rgba(0, 0, 0, 1) 0 0.4rem 0.2rem, rgba(255, 255, 255, 0.966) 0 0rem 1rem;
+}
+
+#ventaglio {
+  position: relative;
+  height: 100%;
+  img {
+    position: absolute;
+    bottom: 0;
+    height: 110%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    transform-origin: left top;
+    box-shadow: -0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+
+    &#ventaglio__1 {
+      left: 2rem;
+      transform: translateY(20%) rotate(-10deg);
+    }
+
+    &#ventaglio__2 {
+      left: calc(50% + 1rem);
+      transform: translateX(-50%) translateY(10%) rotate(-5deg);
+    }
+
+    &#ventaglio__3 {
+      left: calc(100%);
+      transform: translateX(-100%);
+    }
+  }
+}
+
+#mactar {
+  .strip {
+    top: 1rem;
+    height: calc(100% - 2rem);
+  }
+
+  .strip-container img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 440 / 265;
+    object-fit: cover;
+    display: block;
+    margin: -2rem 0;
+    box-shadow: 1rem 0 1.2rem rgba(0, 0, 0, 0.3), -1rem 0 1.2rem rgba(0, 0, 0, 0.3);
+  }
+}
+
+#logo-diouf {
+  width: 50%;
+  max-width: 170px;
+  display: block;
+  margin: 4rem auto 0 auto;
+  padding: 0.5rem;
+  background-color: #fff;
+}
+
+#loghi-associazioni {
+  display: flex;
+
+  gap: 1rem;
+  justify-content: end;
+  align-items: center;
+
+  & > img {
+    display: block;
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    max-width: 100px;
+    padding: 0.2rem;
+    background-color: white;
+  }
+
+  & + div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#partecipa-foto-container {
+  .strip-container {
+    padding: 0 2rem;
+  }
+  .strip {
+    top: 1rem;
+    height: calc(100% - 2rem);
+  }
+}
+
+#partecipa-foto-grid {
+  display: grid;
+  max-width: 300px;
+  grid-template-columns: 1fr 1fr;
+  margin-left: auto;
+  gap: 0.5rem;
+  // grid-template-columns: minmax(2fr, 300px) minmax(1fr, 150px);
+
+  & > img {
+    object-fit: cover;
+    aspect-ratio: 2/1;
+    box-shadow: 1rem 0 1.2rem rgba(0, 0, 0, 0.3), -1rem 0 1.2rem rgba(0, 0, 0, 0.3);
+
+    &:nth-child(1) {
+      grid-column: 1/3;
+    }
+    &:nth-child(2) {
+    }
+    &:nth-child(3) {
+    }
+  }
+}
+
+#partecipa {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.5rem;
+
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+#img-lavoratori-container {
+  padding-left: 2rem;
+}
+
+#diagonal-images {
+  position: relative;
+  height: min(17.3vw, 200px);
+  & > img {
+    position: absolute;
+    display: block;
+    width: min(26vw, 300px);
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    box-shadow: -0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+    // display: block;
+
+    &:first-child {
+      top: 2rem;
+      left: 2rem;
+    }
+    &:last-child {
+      bottom: 2rem;
+      right: 2rem;
+    }
+  }
+}
+
+.w-50 {
+  flex: 1;
+}
+
+@media (max-width: 500px) {
+  .w-30,
+  .w-70,
+  .w-50 {
+    flex: none;
+    width: 100% !important;
+  }
+
+  .flex-sm-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.contacts-container {
+  padding: 1rem 2rem;
+  background: hsl(0, 0%, 11%);
+  box-shadow: inset #000000af 0 3rem 100px;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 750px;
+}
+
+.contacts-col {
+  width: 50%;
+  padding: 1rem 0;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 3px 12px;
+  padding-right: 1rem;
+
+  h3 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-family: 'Cooper Hewitt';
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat';
+    font-weight: 400;
+  }
+
+  img {
+    max-width: 7rem;
+  }
+}
+
+.social-icons {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+
+  & > div {
+    flex: 1;
+    max-width: 2.5rem;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 501px) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+}
+
+//// TABLET //////////////////////////////////////////////////
+@media (max-width: 850px) {
+  header.split {
+    flex-wrap: wrap;
+    gap: 0;
+
+    & > div {
+      width: 100%;
+    }
+
+    h1 {
+      left: 2rem;
+    }
+
+    .menu {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+
+      & + img {
+        width: 20%;
+        margin-left: auto;
+        margin-right: 2rem;
+        display: block;
+      }
+    }
+
+    .strip-container {
+      max-height: 50vh;
+    }
+  }
+
+  #main-img {
+    object-position: top;
+  }
+}
+
+//// MOBILE //////////////////////////////////////////////////
+@media (max-width: 500px) {
+  .split {
+    flex-wrap: wrap;
+    gap: 0;
+
+    & > div {
+      width: 100%;
+    }
+
+    &.split--mobile-reverse {
+      flex-direction: column-reverse;
+    }
+  }
+
+  #ventaglio {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem 0.5rem;
+
+    img {
+      position: static;
+      width: 30%;
+      height: auto;
+      transform: none !important;
+    }
+  }
+
+  #logo-diouf {
+    margin-top: 2rem;
+  }
+
+  #loghi-associazioni {
+    padding-top: 0;
+  }
+
+  #partecipa-foto-grid {
+    margin: 0 auto;
+  }
+
+  #partecipa {
+    grid-template-columns: 1fr;
+    .btn {
+      width: auto;
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+  }
+
+  #img-lavoratori-container {
+    padding-left: 0;
+  }
+
+  #diagonal-images-container {
+    .strip {
+      height: calc(100% - 2rem);
+      top: 1rem;
+    }
+  }
+
+  #diagonal-images {
+    position: relative;
+    height: fit-content;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    & > img {
+      position: relative;
+      display: inline-block;
+      width: 50%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      box-shadow: -0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+      // display: block;
+
+      &:first-child {
+        top: unset;
+        left: unset;
+      }
+      &:last-child {
+        bottom: unset;
+        right: unset;
+      }
+    }
+  }
+}

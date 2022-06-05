@@ -15,8 +15,6 @@ fetch("./partials/imageModal.html").then(res => res.text()).then(modalHtml => {
   let justOpen = false;
 
   function openModal(src) {
-    console.log("macheooo")
-    // let modal = document.querySelector("#img-modal");
     image.src = src;
     modal.classList.add("img-modal--open");
     document.querySelector("html").classList.add("modal-is-open");
@@ -24,7 +22,6 @@ fetch("./partials/imageModal.html").then(res => res.text()).then(modalHtml => {
   }
 
   function closeModal() {
-    // let modal = document.querySelector("#img-modal");
     modal.classList.remove("img-modal--open");
     document.querySelector("html").classList.remove("modal-is-open");
     justOpen = false;
@@ -39,4 +36,5 @@ fetch("./partials/imageModal.html").then(res => res.text()).then(modalHtml => {
       justOpen ? justOpen = false : closeModal();
 
   };
+
 });

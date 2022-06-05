@@ -1,3 +1,6 @@
+/* woff2:  Chrome 26+, Opera 23+, Firefox 39+ */
+/* woff:   Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+
 // === MONTSERRAT ================================================================================================================
 
 /* montserrat-regular - latin */
@@ -6,7 +9,7 @@
   font-style: normal;
   font-weight: 400;
   src: local(''), url('../resources/font/montserrat/montserrat-v23-latin-regular.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../resources/font/montserrat/montserrat-v23-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../resources/font/montserrat/montserrat-v23-latin-regular.woff') format('woff');
 }
 /* montserrat-500 - latin */
 @font-face {
@@ -14,7 +17,7 @@
   font-style: normal;
   font-weight: 500;
   src: local(''), url('../resources/font/montserrat/montserrat-v23-latin-500.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../resources/font/montserrat/montserrat-v23-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../resources/font/montserrat/montserrat-v23-latin-500.woff') format('woff');
 }
 /* montserrat-600 - latin */
 @font-face {
@@ -22,7 +25,7 @@
   font-style: normal;
   font-weight: 600;
   src: local(''), url('../resources/font/montserrat/montserrat-v23-latin-600.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../resources/font/montserrat/montserrat-v23-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../resources/font/montserrat/montserrat-v23-latin-600.woff') format('woff');
 }
 /* montserrat-700 - latin */
 @font-face {
@@ -30,7 +33,7 @@
   font-style: normal;
   font-weight: 700;
   src: local(''), url('../resources/font/montserrat/montserrat-v23-latin-700.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../resources/font/montserrat/montserrat-v23-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../resources/font/montserrat/montserrat-v23-latin-700.woff') format('woff');
 }
 
 // === OSWALD ================================================================================================================
@@ -40,24 +43,29 @@
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 700;
-  src: local(''), url('../resources/font/oswald/oswald-v47-latin-700.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../resources/font/oswald/oswald-v47-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(''), url('../resources/font/oswald/oswald-v47-latin-700.woff2') format('woff2'), url('../resources/font/oswald/oswald-v47-latin-700.woff') format('woff');
 }
 
 // === COOPER HEWITT ================================================================================================================
 
-/* oswald-700 - latin */
 @font-face {
   font-family: 'Cooper Hewitt';
   font-style: normal;
   font-weight: normal;
-  src: local(''), url('../resources/font/cooper/CooperHewitt-Light.otf') format('opentype');    
+  src: local(''), url('../resources/font/cooper/CooperHewitt-Light.woff2') format('woff2'), url('../resources/font/cooper/CooperHewitt-Light.woff') format('woff');
 }
 
-/* oswald-700 - latin */
 @font-face {
   font-family: 'Cooper Hewitt';
   font-style: italic;
   font-weight: normal;
-  src: local(''), url('../resources/font/cooper/CooperHewitt-LightItalic.otf') format('opentype');    
+  src: local(''), url('../resources/font/cooper/CooperHewitt-LightItalic.woff2') format('woff2'),
+    url('../resources/font/cooper/CooperHewitt-LightItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  font-style: normal;
+  font-weight: bold;
+  src: local(''), url('../resources/font/cooper/CooperHewitt-Bold.woff2') format('woff2'), url('../resources/font/cooper/CooperHewitt-Bold.woff') format('woff');
 }
