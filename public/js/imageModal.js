@@ -5,7 +5,7 @@ function htmlToElement(html) {
   return template.content.firstChild;
 }
 
-fetch("./partials/imageModal.html").then(res => res.text()).then(modalHtml => {
+fetch("/partials/imageModal.html").then(res => res.text()).then(modalHtml => {
 
   modal = htmlToElement(modalHtml);
   document.body.appendChild(modal);

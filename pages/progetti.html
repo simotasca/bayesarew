@@ -7,21 +7,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baye Sa Rew - Progetti</title>
+  <title>Baye Sa Rew - {{titolo-head}}</title>
   <meta name="description" content="Aiutaci a promuovere lo sviluppo del villaggio Baye Sa Rew in Senegal.">
   <!-- Open Graph -->
   <meta property="og:title" content="Baye Sa Rew - Progetti">
   <meta property="og:url" content="http://www.bayesarew.com/">
   <meta property="og:description" content="Aiutaci a promuovere lo sviluppo del villaggio Baye Sa Rew in Senegal.">
-  <meta property="og:image" content="./resources/img/opengraph.png">
+  <meta property="og:image" content="/resources/img/opengraph.png">
   <!-- FONTS -->
-  <link rel="preload" href="./resources/font/oswald/oswald-v47-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./resources/font/cooper/CooperHewitt-Bold.woff2" type="font/woff2" as="font" crossorigin>
-  <link rel="preload" href="./resources/font/cooper/CooperHewitt-Light.woff2" type="font/woff2" as="font" crossorigin>
-  <link rel="preload" href="./resources/font/montserrat/montserrat-v23-latin-500.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./resources/font/montserrat/montserrat-v23-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/resources/font/oswald/oswald-v47-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/resources/font/cooper/CooperHewitt-Bold.woff2" type="font/woff2" as="font" crossorigin>
+  <link rel="preload" href="/resources/font/cooper/CooperHewitt-Light.woff2" type="font/woff2" as="font" crossorigin>
+  <link rel="preload" href="/resources/font/montserrat/montserrat-v23-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/resources/font/montserrat/montserrat-v23-latin-600.woff2" as="font" type="font/woff2" crossorigin>
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/progetti.min.css">
+  <link rel="stylesheet" href="/css/progetti.min.css">
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
@@ -36,17 +36,17 @@
       <header class="split">
         <div class="strip-container">
           <div class="strip strip--yellow strip--left"></div>
-          <img id="main-img" src="./resources/img/progetti/donne_agricoltura.jpg" alt="">
-          <h1 class="text-yellow"><span class="text-white">I NOSTRI</span> PROGETTI</h1>
+          <img id="main-img" src="/resources/img/progetti/donne_agricoltura.jpg" alt="">
+          <h1 class="text-yellow">{{titolo-slogan}}</h1>
         </div>
         <div>
           <nav class="menu">
-            <img class="menu-item hide-on-mobile" src="./resources/img/logo2.svg" alt="">
-            <a class="menu-item" href="/">HOME</a>
-            <a class="menu-item" href="/comingsoon">CHI SIAMO</a>
-            <a class="menu-item">PROGETTI</a>
+            <img class="menu-item hide-on-mobile" src="/resources/img/logo2.svg" alt="" loading="lazy" />
+            <a class="menu-item" href="/">{{menu1}}</a>
+            <a class="menu-item" href="/comingsoon">{{menu2}}</a>
+            <a class="menu-item">{{menu3}}</a>
           </nav>
-          <img class="hide-on-desktop" src="./resources/img/logo2.svg" alt="">
+          <img class="hide-on-desktop" src="/resources/img/logo2.svg" alt="" loading="lazy" />
         </div>
       </header>
 
@@ -59,9 +59,9 @@
 
         <div class="half half--left">
           <div id="ventaglio">
-            <img id="ventaglio__1" class="img-modal__toggler" src="./resources/img/foto/due_lavoratori.jpg" alt="">
-            <img id="ventaglio__2" class="img-modal__toggler" src="./resources/img/foto/donna_seduta.jpg" alt="">
-            <img id="ventaglio__3" class="img-modal__toggler" src="./resources/img/foto/muratore.jpg" alt="">
+            <img id="ventaglio__1" class="img-modal__toggler" src="/resources/img/foto/due_lavoratori.jpg" alt="" loading="lazy" />
+            <img id="ventaglio__2" class="img-modal__toggler" src="/resources/img/foto/donna_seduta.jpg" alt="" loading="lazy" />
+            <img id="ventaglio__3" class="img-modal__toggler" src="/resources/img/foto/muratore.jpg" alt="" loading="lazy" />
           </div>
         </div>
 
@@ -71,13 +71,9 @@
             <div class="strip strip--yellow strip--right"></div>
 
             <div class="half half--right">
-              <h3 class="text-white text-shadow">SOSTIENICI CON UNA DONAZIONE</h3>
-              <p class="montserrat">
-                La cooperativa Baye Sa Rew non ha scopo di lucro: <br>
-                in progetti di utilità sociale, per salvaguardare i membri della comunità
-                e per dare un contributo allo sviluppo socio-economico del Senegal.
-              </p>
-              <a href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank" class="btn btn-dark h3">DONA</a>
+              <h3 class="text-white text-shadow">{{titolo1}}</h3>
+              <p class="montserrat">{{paragrafo1}}</p>
+              <a href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank" class="btn btn-dark h3">{{tasto-dona}}</a>
             </div>
 
           </div>
@@ -98,27 +94,22 @@
           <div class="strip-container">
             <div class="strip strip--yellow strip--left"></div>
             <div class="half half--left p-2">
-              <img class="img-modal__toggler" src=".\resources\img\foto\squadra_calcio.jpg" alt="">
+              <img class="img-modal__toggler" src="/resources/img/foto/squadra_calcio.jpg" alt="" loading="lazy" />
             </div>
           </div>
 
           <div class="half half--left p-2">
             <p class="montserrat text-white fw-normal text-shadow">
-              La scuola di calcio Mactar Diouf nasce a Dakar e riunisce bambini di 3 diverse fasce d’età. <br>
-              L’intento principale della scuola è di promuovere <span class="text-yellow">l’educazione sportiva dei giovani</span> del villaggio e delle zone limitrofe,
-              oltre a fungere come mezzo di espressione e di crescita per le generazioni future.
-              E’ il primo progetto sociale promosso dalla <span class="text-l-blue">Cooperativa Baye Sa Rew</span>
+              {{paragrafo2}}
             </p>
           </div>
 
         </div>
 
         <div class="p-2">
-          <h3 class="text-white text-shadow">LA SCUOLA DI CALCIO MACTAR DIOUF</h3>
-          <h5 class="text-white montserrat fw-500 text-shadow">
-            Lo sport come mezzo di <span class="text-yellow">integrazione sociale</span> e di <span class="text-l-blue"> crescita personale</span>.
-          </h5>
-          <img id="logo-diouf" src="./resources/img/logo_diouf.jpg" alt="">
+          <h3 class="text-white text-shadow">{{titolo2}}</h3>
+          <h5 class="text-white montserrat fw-500 text-shadow">{{bigtesto1}}</h5>
+          <img id="logo-diouf" src="/resources/img/logo_diouf.jpg" alt="" loading="lazy" />
         </div>
 
       </section>
@@ -128,16 +119,15 @@
       <section class="split split--mobile-reverse">
 
         <div id="loghi-associazioni" class="p-2">
-          <img src="./resources/img/logo_quarto_raggio.svg" alt="">
-          <img src="./resources/img/logo_ASR.svg" alt="">
-          <img src="./resources/img/logo_city_angels.jpg" alt="">
+          <img src="/resources/img/logo_quarto_raggio.svg" alt="" loading="lazy">
+          <img src="/resources/img/logo_ASR.svg" alt="" loading="lazy">
+          <img src="/resources/img/logo_city_angels.jpg" alt="" loading="lazy">
         </div>
 
         <div class="p-2">
           <div class="half">
             <h4 class="text-white montserrat fw-500 mb-0 text-shadow">
-              Il progetto ha suscitato l’interesse di alcune <span class="text-l-blue">associazioni Italiane</span>,
-              che contribuiscono attivamente con <span class="text-l-blue">aiuti e manodopera</span>.
+              {{bigtesto2}}
             </h4>
           </div>
         </div>
@@ -154,9 +144,9 @@
             <div class="strip strip--yellow strip--left"></div>
             <div class="half half--left">
               <div id="partecipa-foto-grid">
-                <img class="img-fluid img-modal__toggler" src=".\resources\img\foto\squadra_calcio.jpg" alt="">
-                <img class="img-fluid img-modal__toggler" src=".\resources\img\foto\pantaloncini_blu.jpg" alt="">
-                <img class="img-fluid img-modal__toggler" src=".\resources\img\foto\pantaloncini_verdi.jpg" alt="">
+                <img class="img-fluid img-modal__toggler" src="/resources/img/foto/squadra_calcio.jpg" alt="" loading="lazy">
+                <img class="img-fluid img-modal__toggler" src="/resources/img/foto/pantaloncini_blu.jpg" alt="" loading="lazy">
+                <img class="img-fluid img-modal__toggler" src="/resources/img/foto/pantaloncini_verdi.jpg" alt="" loading="lazy">
               </div>
             </div>
           </div>
@@ -166,16 +156,17 @@
         <div class="p-2">
           <div class="half half--right">
             <p class="montserrat text-white fw-normal text-shadow">
-              Grazie al contributo di <b class="text-l-blue">City Angels</b> e <b class="text-l-blue">Quarto Raggio</b>,
-              la scuola è stata rifornita di divise ufficiali e scarpe da calcio.
-              L’Associazione Sportiva <b class="text-l-blue">Rugby Milano</b> si è unita alla raccolta fondi,
-              regalando generosamente altro materiale sportivo.
+              {{paragrafo3}}
             </p>
             <div id="partecipa">
-              <h3 class="text-white text-shadow">PARTECIPA ANCHE TU ALLA RACCOLTA FONDI:</h3>
+              <h3 class="text-white text-shadow">{{titolo3}}:</h3>
               <div>
-                <a href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank" class="btn btn-outline">Go Fundme</a>
-                <a href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank" class="btn btn-yellow">DONA</a>
+                <a href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank" class="btn btn-outline">
+                  Go Fundme
+                </a>
+                <a href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank" class="btn btn-yellow">
+                  {{tasto-dona}}
+                </a>
               </div>
             </div>
           </div>
@@ -190,17 +181,16 @@
       <section class="split">
         <div id="img-lavoratori-container">
           <div class="half half--left">
-            <img class="img-fluid img-modal__toggler" src="./resources/img/foto/lavorazione_sesamo.jpg" alt="">
+            <img class="img-fluid img-modal__toggler" src="/resources/img/foto/lavorazione_sesamo.jpg" alt="" loading="lazy">
           </div>
         </div>
 
         <div>
           <div class="strip-container p-2">
             <div class="strip strip--right strip--blue"></div>
-            <h3 class="text-white text-shadow">LA COOPERATIVA AGRICOLA</h3>
+            <h3 class="text-white text-shadow">{{titolo4}}</h3>
             <p class="text-white fw-500 montserrat mb-0">
-              Il villaggio di Gapassel vanta un’estensione di circa 50 ettari coltivabili. <br>
-              Il lavoro agricolo è la base su cui si fonda l’attività della cooperativa e comprende la semina intensiva e l’allevamento.
+              {{paragrafo4}}
             </p>
           </div>
         </div>
@@ -214,7 +204,7 @@
         <div class="p-2">
           <div class="half">
             <h4 class="text-white montserrat fw-500 text-shadow mb-0">
-              Il terreno agricolo è rimasto incolto per 8 anni, dal 2014, per <span class="text-yellow">mancanza di fondi</span>.
+              {{bigtesto3}}
             </h4>
           </div>
         </div>
@@ -229,8 +219,8 @@
           <div id="diagonal-images-container" class="strip-container">
             <div class="strip strip--blue strip--left"></div>
             <div id="diagonal-images" class="half half--left">
-              <img class="img-modal__toggler" src="./resources/img/foto/pecore.jpg" alt="">
-              <img class="img-modal__toggler" src="./resources/img/foto/tre_bambini_2.jpg" alt="">
+              <img class="img-modal__toggler" src="/resources/img/foto/pecore.jpg" alt="" loading="lazy" />
+              <img class="img-modal__toggler" src="/resources/img/foto/tre_bambini_2.jpg" alt="" loading="lazy" />
             </div>
           </div>
 
@@ -238,11 +228,8 @@
 
         <div class="p-2">
           <div class="half text-white montserrat text-shadow">
-            <p class="fw-normal">
-              La <span class="text-yellow">mancanza di strumenti adeguati</span> ha impedito agli abitanti del villaggio di sfruttare a pieno il potenziale di una terra così vasta e fertile:
-              il lavoro fin’ora si è sempre limitato alla semina di piccoli appezzamenti durante i periodi di pioggia.
-            </p>
-            <p class="fw-normal">(Nella foto 3 bambini che corrono nel campo abbandonato)</p>
+            <p class="fw-normal">{{paragrafo5}}</p>
+            <p class="fw-normal">{{paragrafo6}}</p>
           </div>
         </div>
       </section>
@@ -258,22 +245,22 @@
           <div class="strip-container p-2">
             <div class="strip strip--right strip--blue"></div>
             <div class="half half--right">
-              <h3 class="text-white text-shadow">LA RINASCITA</h3>
+              <h3 class="text-white text-shadow">{{titolo5}}</h3>
               <p class="text-white montserrat mb-0">
-                E’ in corso un piano di semina per il 2022, primo passo verso l’attuazione di diversi obbiettivi:
+                {{paragrafo7}}
               </p>
             </div>
           </div>
 
           <ul class="text-white montserrat text-shadow">
             <li>
-              <h4 class="fw-normal">La costruzione di un <span class="text-yellow">sistema di irrigazione</span>.</h4>
+              <h4 class="fw-normal">{{bigtesto4}}</h4>
             </li>
             <li>
-              <h4 class="fw-normal">La realizzazione di una <span class="text-yellow">cisterna per la raccolta dell’acqua</span>, insieme a nuovi metodi per la conservazione.</h4>
+              <h4 class="fw-normal">{{bigtesto5}}</h4>
             </li>
             <li>
-              <h4 class="fw-normal">L’implementazione di nuovi <span class="text-yellow">strumenti agricoli</span> per la lavorazione del terreno.</h4>
+              <h4 class="fw-normal">{{bigtesto6}}</h4>
             </li>
           </ul>
         </div>
@@ -287,11 +274,10 @@
       <section class="contacts-container">
         <div class="contacts flex">
           <div class="contacts-col contacts-logo w-50">
-            <img class="w-100" src="resources/img/logo2.svg" alt="" loading="lazy" />
-            <!-- <img class="w-100" src="resources/img/logo-alex.svg" alt=""> -->
+            <img class="w-100" src="/resources/img/logo2.svg" alt="" loading="lazy" />
           </div>
           <div class="contacts-col w-50">
-            <h3>CONTATTI</h3>
+            <h3>{{titolo1-contatti}}</h3>
             <p class="montserrat"><b>Baye Sa rew</b></p>
             <p>Gapassel (Dakaar), Senegal</p>
             <br>
@@ -311,16 +297,16 @@
             <p><a href="mailto:bayesarew.coop@gmail.com">bayesarew.coop@gmail.com</a></p>
           </div>
           <div class="contacts-col w-50">
-            <h3>SEGUICI</h3>
+            <h3>{{titolo2-contatti}}</h3>
             <div class="social-icons">
               <div>
                 <a href="https://www.instagram.com/baye_sa_rew/" target="_blank">
-                  <img class="w-100" src="resources/img/social/ig.svg" alt="" loading="lazy" />
+                  <img class="w-100" src="/resources/img/social/ig.svg" alt="" loading="lazy" />
                 </a>
               </div>
               <div>
                 <a href="https://www.facebook.com/Baye-Sa-Rew-Villaggio-di-Gapassel-103300722295945/" target="_blank">
-                  <img class="w-100" src="resources/img/social/fb.svg" alt="" loading="lazy" />
+                  <img class="w-100" src="/resources/img/social/fb.svg" alt="" loading="lazy" />
                 </a>
               </div>
             </div>
@@ -332,7 +318,7 @@
 
   </div>
 
-  <script src="./js/imageModal.js"></script>
+  <script src="/js/imageModal.js"></script>
   <script>
     (function () {
       // console.log(ScrollTrigger)

@@ -12,11 +12,11 @@
   <meta property="og:title" content="Baye Sa Rew">
   <meta property="og:url" content="http://www.bayesarew.com/">
   <meta property="og:description" content="Aiutaci a promuovere lo sviluppo del villaggio Baye Sa Rew in Senegal.">
-  <meta property="og:image" content="./resources/img/opengraph.png">
+  <meta property="og:image" content="/resources/img/opengraph.png">
   <!-- FONTS -->
-  <link rel="preload" href="./resources/font/oswald/oswald-v47-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/resources/font/oswald/oswald-v47-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/index.min.css">
+  <link rel="stylesheet" href="/css/index.min.css">
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
@@ -25,164 +25,151 @@
 <body>
 
   <section class="main-container">
-    <!-- <img id="main-background" src="./resources/img/foto/schiena.jpg" alt="" /> -->
+    <!-- <img id="main-background" src="/resources/img/foto/schiena.jpg" alt="" /> -->
     <img id="main-background" alt="" />
-    <object id="main-impronta" class="main-impronta" type="image/svg+xml" data="resources/img/impronta.svg"></object>
+    <object id="main-impronta" class="main-impronta" type="image/svg+xml" data="/resources/img/impronta.svg"></object>
 
-    <img id="main-logo" class="logo" src="./resources/img/logo2.svg" alt="logo">
+    <img id="main-logo" class="logo" src="/resources/img/logo2.svg" alt="logo">
     <div id="logo-check" class="logo"></div>
 
     <nav class="menu">
-      <a class="menu-item">HOME</a>
-      <a class="menu-item" href="/comingsoon">CHI SIAMO</a>
-      <a class="menu-item" href="/progetti">PROGETTI</a>
+      <a class="menu-item">{{menu1}}</a>
+      <a class="menu-item" href="/comingsoon">{{menu2}}</a>
+      <a class="menu-item" href="/progetti">{{menu3}}</a>
     </nav>
 
     <div class="hero">
       <h1 class="title">BAYE <br> SA REW</h1>
-      <h2 class="subtitle">COLTIVA LA TUA TERRA</h2>
+      <h2 class="subtitle">{{titolo-slogan}}</h2>
       <div class="carousel">
-        <div class="carousel__img"><img class="img-modal__toggler" src="resources/img/foto/uomini_seduti.jpg" alt="uomini seduti" loading="lazy" /></div>
-        <div class="carousel__img"><img class="img-modal__toggler" src="resources/img/foto/donna_seduta.jpg" alt="boh" loading="lazy" /></div>
-        <div class="carousel__img"><img class="img-modal__toggler" src="resources/img/foto/due_lavoratori.jpg" alt="boh" loading="lazy" /></div>
+        <div class="carousel__img"><img class="img-modal__toggler" src="/resources/img/foto/uomini_seduti.jpg" alt="uomini seduti" loading="lazy" /></div>
+        <div class="carousel__img"><img class="img-modal__toggler" src="/resources/img/foto/donna_seduta.jpg" alt="boh" loading="lazy" /></div>
+        <div class="carousel__img"><img class="img-modal__toggler" src="/resources/img/foto/due_lavoratori.jpg" alt="boh" loading="lazy" /></div>
       </div>
     </div>
 
     <div class="main-social">
       <a href="https://www.facebook.com/Baye-Sa-Rew-Villaggio-di-Gapassel-103300722295945/" target="_blank">
-        <img src="resources/img/social/fb.svg" alt="FB" />
+        <img src="/resources/img/social/fb.svg" alt="FB" />
       </a>
       <a href="https://www.instagram.com/baye_sa_rew/" target="_blank">
-        <img src="resources/img/social/ig.svg" alt="IG" />
+        <img src="/resources/img/social/ig.svg" alt="IG" />
       </a>
     </div>
 
     <div class="main-dona">
       <h2>
-        <a href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank">DONA</a>
+        <a href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank">{{tasto-dona}}</a>
       </h2>
     </div>
   </section>
 
   <section class="dona-container">
-    <img class="background-logo" src="./resources/img/impronta-africa.svg" alt="" loading="lazy" width="" height="" />
+    <img class="background-logo" src="/resources/img/impronta-africa.svg" alt="" loading="lazy" width="" height="" />
 
     <header class="dona-header">
-      <div><img src="./resources/img/logo3.svg" alt="logo" loading="lazy" /></div>
-      <!-- <div><img src="./resources/img/logo-alex.svg" alt="logo" /></div> -->
+      <div><img src="/resources/img/logo3.svg" alt="logo" loading="lazy" /></div>
+      <!-- <div><img src="/resources/img/logo-alex.svg" alt="logo" /></div> -->
       <nav class="menu">
-        <a class="menu-item">HOME</a>
-        <a class="menu-item" href="/comingsoon">CHI SIAMO</a>
-        <a class="menu-item" href="/progetti">PROGETTI</a>
+        <a class="menu-item">{{menu1}}</a>
+        <a class="menu-item" href="/comingsoon">{{menu2}}</a>
+        <a class="menu-item" href="/progetti">{{menu3}}</a>
       </nav>
-      <h2 class="montserrat m-0"><span class="text-yellow">Aiutaci</span> ad Aiutare</h2>
+      <h2 class="montserrat m-0">{{titolo1}}</h2>
     </header>
 
     <div class="dona-content">
       <div class="flex p-2 pt-0 g-1">
         <div class="w-70">
-          <img class="w-100" src="./resources/img/foto/bambini.jpg" alt="bambini" />
+          <img class="w-100" src="/resources/img/foto/bambini.jpg" alt="bambini" />
         </div>
         <div class="w-30">
           <div class="aiutaci-p h5">
             <div class="left-in">
-              <i>
-                Contribuisci ad aiutare le persone del <span class="text-l-blue">villaggio</span>
-                senegalese "Gapassel", con la <span class="text-yellow">buona volontà</span>: puoi
-                partecipare a diversi progetti sociali e umanitari, anche solo con una piccola donazione.
-              </i>
+              <i>{{paragrafo1}}</i>
             </div>
           </div>
         </div>
       </div>
       <div class="align-center">
         <a class="btn btn-outline h5" href="/progetti">
-          PROGETTI
+          {{tasto-progetti}}
         </a>
         <a class="btn btn-yellow h5" href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank">
-          DONA
+          {{tasto-dona}}
         </a>
       </div>
       <div class="flex flex-sm-reverse p-2 g-1">
         <div class="w-50">
           <div class="aiutaci-p aiutaci-p-2 h5">
             <div class="right-in">
-              <i>
-                Questi sono i <span class="text-l-blue">bambini</span> del villaggio che si allenano a calcio, sulla
-                sabbia, senza scarpe e senza strutture protettive. Contribuisci al successo della squadra
-                <span class="text-yellow">"Matar Diouf"</span> attraverso una donazione.
-              </i>
+              <i>{{paragrafo2}}</i>
             </div>
           </div>
         </div>
         <div class="w-50 video video-container">
-          <video class="w-100" src="./resources/video/giocano_sulla_sabbia.mp4" autoplay loop muted playsinline loading="lazy"></video>
+          <video class="w-100" src="/resources/video/giocano_sulla_sabbia.mp4" autoplay loop muted playsinline loading="lazy"></video>
         </div>
       </div>
     </div>
   </section>
 
   <section class="foto-container">
-    <img src="./resources/img/impronta-albero.svg" class="background-logo background-logo-foto" loading="lazy">
+    <img src="/resources/img/impronta-albero.svg" class="background-logo background-logo-foto" loading="lazy">
 
     <nav class="menu">
-      <a class="menu-item">HOME</a>
-      <a class="menu-item" href="/comingsoon">CHI SIAMO</a>
-      <a class="menu-item" href="/progetti">PROGETTI</a>
+      <a class="menu-item">{{menu1}}</a>
+      <a class="menu-item" href="/comingsoon">{{menu2}}</a>
+      <a class="menu-item" href="/progetti">{{menu3}}</a>
     </nav>
 
     <div class="flex my-2">
       <div class="la-line"></div>
-      <h2>La Vita nel <span class="text-yellow">Villaggio</span></h2>
+      <h2>{{titolo2}}</h2>
     </div>
 
     <div class="photo-columns">
       <div class="double-col">
         <div class="elem img-elem img-elem--active">
-          <img class="img-modal__toggler w-100" src="./resources/img/foto/convivio.jpg" alt="" loading="lazy">
+          <img class="img-modal__toggler w-100" src="/resources/img/foto/convivio.jpg" alt="" loading="lazy">
         </div>
         <div class="elem hide-on-desktop">
-          <p class="h5">A Gapassel ci sono <span class="text-yellow">tanti problemi</span>, ma gli abitanti vivono
-            comunque <span class="text-l-blue">felici</span>.
-          </p>
+          <p class="h5">{{paragrafo3}}</p>
         </div>
         <div class="photo-columns">
           <div class="col-1">
             <div class="elem elem-logo">
-              <img class="img-modal__toggler w-100" src="./resources/img/logo.svg" alt="" loading="lazy" />
+              <img class="img-modal__toggler w-100" src="/resources/img/logo.svg" alt="" loading="lazy" />
             </div>
             <div class="elem img-elem">
-              <img class="img-modal__toggler w-100" src="./resources/img/foto/muratore.jpg" alt="" loading="lazy" />
+              <img class="img-modal__toggler w-100" src="/resources/img/foto/muratore.jpg" alt="" loading="lazy" />
             </div>
             <div class="elem img-elem hide-on-desktop">
-              <img class="img-modal__toggler w-100" src="./resources/img/foto/foto_di_gruppo.jpg " alt="" loading="lazy" />
+              <img class="img-modal__toggler w-100" src="/resources/img/foto/foto_di_gruppo.jpg " alt="" loading="lazy" />
             </div>
             <div class="elem img-elem hide-on-desktop">
-              <img class="img-modal__toggler w-100" src="./resources/img/foto/casetta.jpg" alt="" loading="lazy" />
+              <img class="img-modal__toggler w-100" src="/resources/img/foto/casetta.jpg" alt="" loading="lazy" />
             </div>
           </div>
 
           <div class="col-2">
             <div class="elem img-elem">
-              <img class="img-modal__toggler w-100" src="./resources/img/foto/ragazzi.jpg" alt="" loading="lazy">
+              <img class="img-modal__toggler w-100" src="/resources/img/foto/ragazzi.jpg" alt="" loading="lazy">
             </div>
             <div class="elem img-elem">
-              <img class="img-modal__toggler w-100" src="./resources/img/foto/tre_bambini.jpg" alt="" loading="lazy">
+              <img class="img-modal__toggler w-100" src="/resources/img/foto/tre_bambini.jpg" alt="" loading="lazy">
             </div>
             <div class="elem">
-              <p class="h5 m-0">
-                Se vuoi andare veloce vai da solo, se vuoi andare <span class="text-l-blue">lontano</span> vacci in
-                gruppo.
-              </p>
+              <p class="h5 m-0">{{paragrafo4}}</p>
               <p class="float-right m-0">
-                <span class="text-yellow">- Detto africano -</span>
+                <span class="text-yellow">- {{detto-africano}} -</span>
               </p>
             </div>
             <div class="elem img-elem hide-on-desktop">
-              <img class="img-modal__toggler w-100" src="./resources/img/foto/asini.jpg" alt="" loading="lazy" />
+              <img class="img-modal__toggler w-100" src="/resources/img/foto/asini.jpg" alt="" loading="lazy" />
             </div>
             <div class="elem img-elem hide-on-desktop">
-              <img class="img-modal__toggler w-100" src="./resources/img/foto/uomini_seduti.jpg" alt="" loading="lazy" />
+              <img class="img-modal__toggler w-100" src="/resources/img/foto/uomini_seduti.jpg" alt="" loading="lazy" />
             </div>
           </div>
         </div>
@@ -190,21 +177,19 @@
 
       <div class="col-3 hide-on-mobile">
         <div class="elem">
-          <p class="h5">A Gapassel ci sono <span class="text-yellow">tanti problemi</span>, ma gli abitanti vivono
-            comunque <span class="text-l-blue">felici</span>.
-          </p>
+          <p class="h5">{{paragrafo3}}</p>
         </div>
         <div class="elem img-elem">
-          <img class="img-modal__toggler w-100" src="./resources/img/foto/foto_di_gruppo.jpg " alt="" loading="lazy" />
+          <img class="img-modal__toggler w-100" src="/resources/img/foto/foto_di_gruppo.jpg " alt="" loading="lazy" />
         </div>
         <div class="elem img-elem">
-          <img class="img-modal__toggler w-100" src="./resources/img/foto/casetta.jpg" alt="" loading="lazy" />
+          <img class="img-modal__toggler w-100" src="/resources/img/foto/casetta.jpg" alt="" loading="lazy" />
         </div>
         <div class="elem img-elem">
-          <img class="img-modal__toggler w-100" src="./resources/img/foto/asini.jpg" alt="" loading="lazy" />
+          <img class="img-modal__toggler w-100" src="/resources/img/foto/asini.jpg" alt="" loading="lazy" />
         </div>
         <div class="elem img-elem">
-          <img class="img-modal__toggler w-100" src="./resources/img/foto/uomini_seduti.jpg" alt="" loading="lazy" />
+          <img class="img-modal__toggler w-100" src="/resources/img/foto/uomini_seduti.jpg" alt="" loading="lazy" />
         </div>
       </div>
     </div>
@@ -213,11 +198,11 @@
   <section class="contacts-container">
     <div class="contacts flex">
       <div class="contacts-col contacts-logo w-50">
-        <img class="w-100" src="resources/img/logo2.svg" alt="" loading="lazy" />
-        <!-- <img class="w-100" src="resources/img/logo-alex.svg" alt=""> -->
+        <img class="w-100" src="/resources/img/logo2.svg" alt="" loading="lazy" />
+        <!-- <img class="w-100" src="/resources/img/logo-alex.svg" alt=""> -->
       </div>
       <div class="contacts-col w-50">
-        <h2>Contatti</h2>
+        <h2>{{titolo1-contatti}}</h2>
         <p><b>Baye Sa rew</b></p>
         <p>Gapassel (Dakaar), Senegal</p>
         <p>
@@ -235,16 +220,16 @@
         <p><a href="mailto:bayesarew.coop@gmail.com">bayesarew.coop@gmail.com</a></p>
       </div>
       <div class="contacts-col w-50">
-        <h2>Seguici</h2>
+        <h2>{{titolo2-contatti}}</h2>
         <div class="social-icons">
           <div>
             <a href="https://www.instagram.com/baye_sa_rew/" target="_blank">
-              <img class="w-100" src="resources/img/social/ig.svg" alt="" loading="lazy" />
+              <img class="w-100" src="/resources/img/social/ig.svg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
             <a href="https://www.facebook.com/Baye-Sa-Rew-Villaggio-di-Gapassel-103300722295945/" target="_blank">
-              <img class="w-100" src="resources/img/social/fb.svg" alt="" loading="lazy" />
+              <img class="w-100" src="/resources/img/social/fb.svg" alt="" loading="lazy" />
             </a>
           </div>
         </div>
@@ -254,123 +239,7 @@
 
 </body>
 
-<script src="./js/imageModal.js"></script>
-<script>
-  function pxStringToInt(str) {
-    return parseInt(str.substring(0, str.length - 2));
-  }
-
-  function resizeCarousel() {
-    let subtitle = document.getElementsByClassName("subtitle")[0];
-    let subtitleStyle = window.getComputedStyle(subtitle);
-    let width = pxStringToInt(subtitleStyle.width) + pxStringToInt(subtitleStyle.marginLeft);
-    let carousel = document.getElementsByClassName("carousel")[0];
-    carousel.style.width = width + "px";
-  }
-
-  function mainAnimation() {
-    let svgDoc = document.getElementById("main-impronta").contentDocument;
-    gsap.to('.carousel__img', { autoAlpha: 1, stagger: .2, duration: 1.5, delay: 1.5 });
-    gsap.to(svgDoc.getElementsByClassName('st0'), { autoAlpha: 1, duration: .4, stagger: -.05, delay: -.5 });
-
-    let dona = document.querySelector('.main-dona');
-    let tl = gsap.timeline()
-      .to(dona, { x: "-2rem", duration: .2, ease: "power2.in", delay: 4 })
-      .to(dona, { x: "0", duration: .2, ease: "power2.out" }, "+=.25");
-
-    let hover = gsap.to(dona, { x: "-2rem", duration: .15, ease: "sine.out", paused: true });
-
-    dona.addEventListener("mouseenter", () => hover.play());
-    dona.addEventListener("mouseleave", () => hover.reverse());
-  }
-
-  function waitBeforeMainAnimation() {
-    let promises = [];
-
-    promises.push(new Promise(resolve => {
-      document.getElementById("main-impronta").addEventListener("load", () => {
-        logoPosition(true);
-        resolve();
-      });
-    }));
-
-    promises.push(new Promise(resolve => {
-      document.getElementById("main-background").onload = resolve;
-    }));
-
-    document.getElementById("main-background").src = "./resources/img/foto/schiena.jpg"; // le altre sono lazy quindi spero vadano sempre?
-
-    Array.from(document.querySelectorAll(".carousel__img img")).forEach(image => {
-      promises.push(new Promise(resolve => {
-        image.onload = resolve;
-      }));
-    });
-
-    Promise.all(promises).then(() => {
-      mainAnimation();
-    });
-  }
-
-  function logoPosition(first = false) {
-    let impronta = document.getElementById('main-impronta');
-    let logoCheck = document.getElementById('logo-check');
-    let logo = document.getElementById('main-logo');
-
-    let impPos = impronta.getBoundingClientRect();
-    let logoPos = logoCheck.getBoundingClientRect();
-
-    let spread = window.innerHeight * 0.03;
-
-    if (logoPos.right > impPos.left + spread) {
-      logo.classList.add("logo--on-overlap");
-    } else {
-      logo.classList.remove("logo--on-overlap");
-    }
-
-    if (first) {
-      logo.classList.add("logo--visible")
-    }
-  }
-
-  (function () {
-    waitBeforeMainAnimation();
-    resizeCarousel();
-    document.getElementsByClassName("carousel")[0].classList.add("carousel--visible");
-    
-    window.addEventListener("resize", () => {
-      logoPosition();
-      resizeCarousel();
-    });
-
-
-    // SCROLL TRIGGER
-    gsap.fromTo('.left-in',
-      { x: '-100%', opacity: .2 },
-      {
-        x: 0, opacity: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          // markers: true,
-          trigger: '.left-in',
-          // start/end: 'trigger viewport'
-          start: 'top bottom'
-        }
-      });
-
-    gsap.fromTo('.right-in',
-      { x: '100%', opacity: .2 },
-      {
-        x: 0, opacity: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: '.right-in',
-          // start/end: 'trigger viewport'
-          start: 'top bottom', end: '+=50%',
-        }
-      });
-  })();
-
-
-</script>
+<script src="/js/imageModal.js"></script>
+<script src="/js/index.js"></script>
 
 </html>
