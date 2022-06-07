@@ -28,6 +28,7 @@ fetch("/partials/imageModal.html").then(res => res.text()).then(modalHtml => {
   }
 
   for (let toggler of document.querySelectorAll(".img-modal__toggler")) {
+    toggler.style.cursor = "pointer";
     toggler.onclick = () => openModal(toggler.src != null ? toggler.src : toggler.dataset.target);
   }
 
