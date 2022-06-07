@@ -26,7 +26,7 @@ function readLangFile(page, lang) {
   }
 }
 
-const languages = ['it']
+const languages = ['it', 'fr']
 const DEFAULT_LANG_IDX = 0;
 let defaultLanguage = languages[DEFAULT_LANG_IDX]
 
