@@ -111,6 +111,9 @@ router.get('/progetti', (req, res) => {
 router.get('/comingsoon', (req, res) => {
   languageSSR('comingsoon', req, res)
 });
+router.get('/chisiamo', (req, res) => {
+  sendPage(res, 'chisiamo')
+});
 
 
 

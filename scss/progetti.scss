@@ -81,6 +81,7 @@ img {
     width: 50%;
   }
 }
+
 .strip-container {
   position: relative;
   & > * {
@@ -135,7 +136,7 @@ img {
 .menu {
   display: flex;
   align-items: center;
-  margin-bottom: max(14vw, 140px);
+  margin-bottom: min(14vw, 140px);
   margin-right: 2rem;
   img {
     height: 4rem;
@@ -170,6 +171,7 @@ header {
   object-fit: cover;
   // height: auto;
   display: block;
+  
 }
 
 .menu-item {

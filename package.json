@@ -7,7 +7,8 @@
     "start": "node app.js",
     "sass:index": "sass --watch ./scss/index.scss:./public/css/index.min.css  --style compressed",
     "sass:progetti": "sass --watch ./scss/progetti.scss:./public/css/progetti.min.css  --style compressed",
-    "sass:comingsoon": "sass --watch ./scss/comingsoon.scss:./public/css/comingsoon.min.css  --style compressed"
+    "sass:comingsoon": "sass --watch ./scss/comingsoon.scss:./public/css/comingsoon.min.css  --style compressed",
+    "sass:chisiamo": "sass --watch ./scss/chisiamo.scss:./public/css/chisiamo.min.css  --style compressed"
   },
   "author": "Quarto Raggio",
   "dependencies": {
