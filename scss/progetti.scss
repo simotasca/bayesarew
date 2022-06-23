@@ -70,8 +70,9 @@ img {
   max-width: 1440px;
   margin: 0 auto;
   background-image: url('../resources/img/piantina.jpg');
+  background-size: cover; 
+  background-attachment:initial;
   background-position: center;
-  background-size: auto;
 }
 
 .split {

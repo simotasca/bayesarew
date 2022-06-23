@@ -55,16 +55,14 @@ section {
   right: auto;
   bottom: auto;
   z-index: -1;
-  opacity: 0.06;
+  opacity: 0.03;
 }
-
-
 
 .split {
   display: flex;
   gap: 1rem;
 
-  &>div {
+  & > div {
     width: 50%;
   }
 }
@@ -72,7 +70,7 @@ section {
 .strip-container {
   position: relative;
 
-  &>* {
+  & > * {
     position: relative;
     z-index: 1;
   }
@@ -104,7 +102,6 @@ section {
   background: #4da1a9;
   background: #3c91e6;
 }
-
 
 header {
   .strip-container h1 {
@@ -149,7 +146,6 @@ header {
   margin-top: 2rem;
 }
 
-
 .menu-item:hover {
   color: #ebb521c4;
 }
@@ -175,18 +171,15 @@ a.menu-item:hover {
   height: 4rem;
 }
 
-h3 {
+.section-title {
   text-align: center;
   margin-left: 20%;
   margin-bottom: 27px;
 
-
-}
-
-.against-h3 {
-  text-align: left;
-  margin-left: 0%;
- 
+  &.section-title--right {
+    margin-right: 20%;
+    margin-left: unset;
+  }
 }
 
 .griglia-presidente {
@@ -194,7 +187,6 @@ h3 {
   grid-template-columns: 55fr 45fr;
   gap: 27px;
 }
-
 
 .griglia-quartoraggio {
   display: grid;
@@ -227,18 +219,13 @@ h3 {
   padding-top: 4rem;
 }
 
-.margin-right {
-  margin-right: 20%;
-  margin-left: unset;
-}
-
 //// TABLET //////////////////////////////////////////////////
 @media (max-width: 850px) {
   header.split {
     flex-wrap: wrap;
     gap: 0;
 
-    &>div {
+    & > div {
       width: 100%;
     }
 
@@ -251,7 +238,7 @@ h3 {
       margin-bottom: 2rem;
       flex-wrap: wrap;
 
-      &+img {
+      & + img {
         width: 20%;
         margin-left: auto;
         margin-right: 2rem;
@@ -271,11 +258,11 @@ h3 {
   .griglia-presidente {
     grid-template-columns: 1.2fr 1fr;
   }
-  
+
   .paragrafo1 {
     padding-left: 25%;
   }
-  
+
   .griglia-quartoraggio {
     grid-template-columns: 1fr 1.2fr;
   }
@@ -287,19 +274,36 @@ h3 {
   .img-quartoraggio {
     width: 75%;
   }
+
+  .img-background {
+    width: 80%;
+  }
 }
 
 //// MOBILE //////////////////////////////////////////////////
 @media (max-width: 500px) {
-  .griglia-presidente, .griglia-quartoraggio {
+  .griglia-presidente,
+  .griglia-quartoraggio {
     grid-template-columns: 1fr;
+  }
+  
+  .paragrafo2 {
+    grid-row: 0;
+  }
+
+  .paragrafo1 {
+    padding-left: 0;
+  }
+
+  .paragrafo2 {
+    padding-right: 0;
   }
 
   .split {
     flex-wrap: wrap;
     gap: 0;
 
-    &>div {
+    & > div {
       width: 100%;
     }
 
@@ -308,7 +312,7 @@ h3 {
     }
   }
 
-  .margin-right {
+  .section-title, .section-title.section-title--right {
     margin-right: unset;
     margin-left: unset;
   }
