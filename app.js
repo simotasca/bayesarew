@@ -115,8 +115,6 @@ router.get('/chisiamo', (req, res) => {
   sendPage(res, 'chisiamo')
 });
 
-
-
 app.use('/', router);
 app.use(`/:lang`, router);
 
