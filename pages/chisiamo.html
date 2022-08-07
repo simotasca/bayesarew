@@ -12,8 +12,6 @@
 
 <body>
 
-
-
   <div id="main-bg"></div>
 
   <div class="max-width text-white">
@@ -22,15 +20,19 @@
     <header class="split">
       <div class="strip-container">
         <div class="strip strip--yellow strip--left"></div>
-        <!-- <img id="main-img" src="/resources/img/progetti/donne_agricoltura.jpg" alt=""> -->
-        <img id="main-img" src="/resources/img/foto/donna-pensosa.jpg" alt="ragazza-pensosa">
+        <!-- <img id="main-img" src="/resources/img/foto/donna-pensosa.jpg" alt="ragazza-pensosa"> -->
+        <picture>
+          <source srcset="/resources/img/foto/donna-pensosa.webp" type="image/webp" />
+          <source srcset="/resources/img/foto/donna-pensosa.jpg" type="image/jpeg" />
+          <img id="main-img" src="/resources/img/foto/donna-pensosa.jpg" alt="ragazza-pensosa" />
+        </picture>
         <h1 class="text-yellow"> <span class="text-white">CHI</span> SIAMO</h1>
       </div>
       <div>
         <nav class="menu">
           <img class="menu-item hide-on-mobile" src="/resources/img/logo2.svg" alt="logo" loading="lazy" />
           <a class="menu-item" href="/">HOME</a>
-          <a class="menu-item">CHI SIAMO</a>
+          <a class="menu-item" href="/chisiamo">CHI SIAMO</a>
           <a class="menu-item" href="/progetti">PROGETTI</a>
         </nav>
         <img class="hide-on-desktop" src="/resources/img/logo2.svg" alt="logo" loading="lazy" />
@@ -40,53 +42,45 @@
     <div class="spacer hide-on-mobile"></div>
     <div class="spacer"></div>
 
-
     <section>
-
       <h3 class="section-title">IL NOSTRO <span class="text-yellow">PRESIDENTE</span></h3>
-
       <div class="griglia-presidente">
-
         <div class="paragrafo1 montserrat">
-
           <p>
             <span class="text-yellow">Boukounta Mbaye</span>, 55 anni, è presidente e fondatore della
             Cooperativa Baye Sa Rew.
           </p>
-
           <p>
             Ha ereditato da suo Nonno le terre di Gapassel, con la responsabilità di creare una comunità
             fiorente a sostegno delle famiglie della regione.
           </p>
-
           <p>
             Da 15 anni lotta contro <span class="text-l-blue"> il problema dell’Immigrazione</span> e promuove
             il lavoro agricolo per lo sviluppoe la crescita comunitaria.
           </p>
-
         </div>
         <div>
-          <img class="img-boukounta" src="/resources/img/foto/boukountà.jpg" alt="presidente-mbaye-boucountà">
+          <picture>
+            <source srcset="/resources/img/foto/boukountà.webp" type="image/webp" />
+            <source srcset="/resources/img/foto/boukountà.jpg" type="image/jpeg" />
+            <img class="img-boukounta" src="/resources/img/foto/boukountà.jpg" alt="presidente-mbaye-boucountà">
+          </picture>
         </div>
-
-
       </div>
-
     </section>
 
     <div class="spacer"></div>
 
     <section class="margin-top">
-
-
       <h3 class="section-title section-title--right">L'ASSOCIAZIONE <span class="text-l-blue">QUARTORAGGIO</span></h3>
-
       <div class="griglia-quartoraggio">
-
-
-        <div> <img class="img-quartoraggio" src="/resources/img/foto/trovami2.jpg" alt="associazione-quarto-raggio"></div>
-
-
+        <div>
+          <picture>
+            <source srcset="/resources/img/foto/trovami2.webp" type="image/webp" />
+            <source srcset="/resources/img/foto/trovami2." type="image/jpeg" />
+            <img class="img-quartoraggio" src="/resources/img/foto/trovami2." alt="presidente-mbaye-boucountà">
+          </picture>
+        </div>
         <div class="paragrafo2 montserrat">
           <p>
             Quarto Raggio è un’<span class="text-l-blue">organizzazione di volontariato</span> italiana.
@@ -96,9 +90,7 @@
               digitale</span> per promuovere Baye Sa Rew in Senegal e all’estero.
           </p>
         </div>
-
       </div>
-
     </section>
 
     <div class="spacer"></div>
@@ -114,7 +106,7 @@
       </div>
 
       <div class="contacts-col w-50">
-        <h3>{{titolo1-contatti}}</h3>
+        <h3>CONTATTI</h3>
         <p class="montserrat"><b>Baye Sa rew</b></p>
         <p>Gapassel (Dakaar), Senegal</p>
         <br>
@@ -134,7 +126,7 @@
         <p><a href="mailto:bayesarew.coop@gmail.com">bayesarew.coop@gmail.com</a></p>
       </div>
       <div class="contacts-col w-50">
-        <h3>{{titolo2-contatti}}</h3>
+        <h3>SEGUICI</h3>
         <div class="social-icons">
           <div>
             <a href="https://www.instagram.com/baye_sa_rew/" target="_blank">
