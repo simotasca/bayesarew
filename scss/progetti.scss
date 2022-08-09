@@ -488,9 +488,12 @@ a.menu-item:hover {
     gap: 1rem;
     padding: 3rem 0.5rem;
 
-    img {
-      position: static;
+    picture {
       width: 30%;
+    }
+    img {
+      width: 100%;
+      position: static;
       height: auto;
       transform: none !important;
     }
