@@ -1,0 +1,6 @@
+User-agent: *
+Disallow /it/
+Disallow: /public/
+Allow: /public/resources/img
+Allow: /public/resources/video
+Sitemap: http://www.bayesarew.com/sitemap.xml
