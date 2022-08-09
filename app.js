@@ -15,17 +15,6 @@ function currentLanguage(req) {
   return lang && languages.includes(lang) ? lang : null
 }
 
-function readLangFile(page, lang) {
-  let fName = path.join(__dirname, "lang", page, `${lang}.json`);
-  try {
-    const data = fs.readFileSync(fName);
-  } catch {
-    // file not found
-    fName = path.join(__dirname, "lang", page, `it.json`);
-    const data = fs.readFileSync(fName);
-  }
-}
-
 const languages = ['it', 'fr']
 const DEFAULT_LANG_IDX = 0;
 let defaultLanguage = languages[DEFAULT_LANG_IDX]
@@ -116,13 +105,34 @@ router.get('/chisiamo', (req, res) => {
 });
 
 app.use('/', router);
-app.use(`/:lang`, router);
+languages.forEach(lang => {
+  app.use(`/${lang}`, router);
+})
 
 // error handling
 app.use((err, req, res, next) => {
   console.error(err.stack);
   next(err);
 })
+
+app.use((req, res) => {
+  res.status(404);
+
+  // respond with html page
+  if (req.accepts('html')) {
+    sendPage(res, '404')
+    return;
+  }
+
+  // respond with json
+  if (req.accepts('json')) {
+    res.json({ error: 'Not found' });
+    return;
+  }
+
+  // default to plain-text. send()
+  res.type('txt').send('Not found');
+});
 
 // start server
 let port = process.env.PORT || 3000;
