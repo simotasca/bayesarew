@@ -353,7 +353,8 @@
   overflow: hidden;
   // background: #1d1d1dff;
   // background: linear-gradient(0deg, #1d1d1dff 0%, #363636ff 100%);
-  background: #001e36;
+  // background: #001e36;
+  background: #002255;
   background: linear-gradient(180deg, hsl(206, 54%, 11%) -30%, hsl(207, 100%, 5%) 90%);
   box-shadow: inset #000000cc 0 3rem 100px;
   padding: 2rem;
@@ -445,20 +446,20 @@ $photo-gap: 1rem;
   background-color: black;
 
   img {
-    opacity: 0.6;
+    // opacity: 0.6;
 
-    transition: opacity 150ms;
+    // transition: opacity 150ms;
 
-    &:hover {
-      opacity: 1;
-      box-shadow: rgba(255, 255, 255, 0.418) 0 0 20px;
-    }
+    // &:hover {
+    //   opacity: 1;
+    //   box-shadow: rgba(255, 255, 255, 0.418) 0 0 20px;
+    // }
   }
 
   &.img-elem--active {
     img {
       opacity: 1;
-      box-shadow: rgba(255, 255, 255, 0.418) 0 0 20px;
+      box-shadow: rgba(255, 255, 255, 0.814) 0 0 10px;
     }
   }
 }
