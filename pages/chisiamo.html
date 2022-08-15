@@ -41,14 +41,14 @@
           <source srcset="/resources/img/foto/donna-pensosa.jpg" type="image/jpeg" />
           <img id="main-img" src="/resources/img/foto/donna-pensosa.jpg" alt="ragazza-pensosa" />
         </picture>
-        <h1 class="text-yellow"> <span class="text-white">CHI</span> SIAMO</h1>
+        <h1 class="text-yellow">{{titolo-slogan}}</h1>
       </div>
       <div>
         <nav class="menu">
           <img class="menu-item hide-on-mobile" src="/resources/img/logo2.svg" alt="logo" loading="lazy" />
-          <a class="menu-item" href="{{lang-prefix}}/">HOME</a>
-          <a class="menu-item">CHI SIAMO</a>
-          <a class="menu-item" href="{{lang-prefix}}/progetti">PROGETTI</a>
+          <a class="menu-item" href="{{lang-prefix}}/">{{menu1}}</a>
+          <a class="menu-item">{{menu2}}</a>
+          <a class="menu-item" href="{{lang-prefix}}/progetti">{{menu3}}</a>
         </nav>
         <img class="hide-on-desktop" src="/resources/img/logo2.svg" alt="logo" loading="lazy" />
       </div>
@@ -58,21 +58,13 @@
     <div class="spacer"></div>
 
     <section>
-      <h3 class="section-title">IL NOSTRO <span class="text-yellow">PRESIDENTE</span></h3>
+      <h3 class="section-title">{{titolo1}}</h3>
       <div class="griglia-presidente">
         <div class="paragrafo1 montserrat">
           <p>
-            <span class="text-yellow">Boukounta Mbaye</span>, 55 anni, è presidente e fondatore della
-            Cooperativa Baye Sa Rew.
+            {{paragrafo1}}
           </p>
-          <p>
-            Ha ereditato da suo Nonno le terre di Gapassel, con la responsabilità di creare una comunità
-            fiorente a sostegno delle famiglie della regione.
-          </p>
-          <p>
-            Da 15 anni lotta contro <span class="text-l-blue"> il problema dell’Immigrazione</span> e promuove
-            il lavoro agricolo per lo sviluppoe la crescita comunitaria.
-          </p>
+         
         </div>
         <div>
           <picture>
@@ -87,7 +79,7 @@
     <div class="spacer"></div>
 
     <section class="margin-top">
-      <h3 class="section-title section-title--right">L'ASSOCIAZIONE <span class="text-l-blue">QUARTORAGGIO</span></h3>
+      <h3 class="section-title section-title--right">{{titolo2}}</h3>
       <div class="griglia-quartoraggio">
         <div>
           <picture>
@@ -121,7 +113,7 @@
       </div>
 
       <div class="contacts-col w-50">
-        <h3>CONTATTI</h3>
+        <h3>{{titolo1-contatti}}</h3>
         <p class="montserrat"><b>Baye Sa rew</b></p>
         <p>Gapassel (Dakaar), Senegal</p>
         <br>
@@ -141,7 +133,7 @@
         <p><a href="mailto:bayesarew.coop@gmail.com">bayesarew.coop@gmail.com</a></p>
       </div>
       <div class="contacts-col w-50">
-        <h3>SEGUICI</h3>
+        <h3>{{titolo2-contatti}}</h3>
         <div class="social-icons">
           <div>
             <a href="https://www.instagram.com/baye_sa_rew/" target="_blank">
