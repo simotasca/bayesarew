@@ -79,7 +79,6 @@ function logoPosition(first = false) {
     logo.classList.add("logo--visible")
   }
 }
-console.log("MACHEOOOOOO")
 
 (function () {
   waitBeforeMainAnimation();
