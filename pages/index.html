@@ -33,6 +33,7 @@
 <body>
 
   <section class="main-container">
+
     <!-- <img id="main-background" src="/resources/img/foto/schiena.jpg" alt="" /> -->
     <img id="main-background" alt="" />
     <object id="main-impronta" class="main-impronta" type="image/svg+xml" data="/resources/img/impronta.svg"></object>
@@ -42,8 +43,16 @@
 
     <nav class="menu">
       <a class="menu-item">{{menu1}}</a>
-      <a class="menu-item" href="/chisiamo">{{menu2}}</a>
-      <a class="menu-item" href="/progetti">{{menu3}}</a>
+      <a class="menu-item" href="{{lang-prefix}}/chisiamo">{{menu2}}</a>
+      <a class="menu-item" href="{{lang-prefix}}/progetti">{{menu3}}</a>
+      <div id="flags">
+        <a href="/">
+          <img src="/resources/img/bandiere/it.jpg" alt="current-language" />
+        </a>
+        <a href="/fr">
+          <img src="/resources/img/bandiere/fr.jpg" alt="current-language" />
+        </a>
+      </div>
     </nav>
 
     <div class="hero">
@@ -98,8 +107,8 @@
       <!-- <div><img src="/resources/img/logo-alex.svg" alt="logo" /></div> -->
       <nav class="menu">
         <a class="menu-item">{{menu1}}</a>
-        <a class="menu-item" href="/chisiamo">{{menu2}}</a>
-        <a class="menu-item" href="/progetti">{{menu3}}</a>
+        <a class="menu-item" href="{{lang-prefix}}/chisiamo">{{menu2}}</a>
+        <a class="menu-item" href="{{lang-prefix}}/progetti">{{menu3}}</a>
       </nav>
       <h2 class="montserrat m-0">{{titolo1}}</h2>
     </header>
@@ -122,7 +131,7 @@
         </div>
       </div>
       <div class="align-center">
-        <a class="btn btn-outline h5" href="/progetti">
+        <a class="btn btn-outline h5" href="{{lang-prefix}}/progetti">
           {{tasto-progetti}}
         </a>
         <a class="btn btn-yellow h5" href="https://www.gofundme.com/f/compriamo-scarpe-da-calcio-ai-bambini-di-gapassel?qid=c87fd62a3af5ba76459aeb110380fbdd" target="_blank">
@@ -149,8 +158,8 @@
 
     <nav class="menu">
       <a class="menu-item">{{menu1}}</a>
-      <a class="menu-item" href="/chisiamo">{{menu2}}</a>
-      <a class="menu-item" href="/progetti">{{menu3}}</a>
+      <a class="menu-item" href="{{lang-prefix}}/chisiamo">{{menu2}}</a>
+      <a class="menu-item" href="{{lang-prefix}}/progetti">{{menu3}}</a>
     </nav>
 
     <div class="flex my-2">
@@ -318,9 +327,11 @@
     </div>
   </section>
 
+  <script src="/js/imageModal.js"></script>
+  <script src="/js/index.js"></script>
+
 </body>
 
-<script src="/js/imageModal.js"></script>
-<script src="/js/index.js"></script>
+
 
 </html>

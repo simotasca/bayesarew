@@ -43,7 +43,9 @@ function waitBeforeMainAnimation() {
     document.getElementById("main-background").onload = resolve
   }));
 
+  console.log(document.getElementById("main-background"))
   document.getElementById("main-background").src = "/resources/img/foto/schiena.jpg"; // le altre sono lazy quindi spero vadano sempre?
+  console.log(document.getElementById("main-background").src)
 
   Array.from(document.querySelectorAll(".carousel__img img")).forEach((image, idx) => {
     promises.push(new Promise(resolve => {
@@ -77,6 +79,7 @@ function logoPosition(first = false) {
     logo.classList.add("logo--visible")
   }
 }
+console.log("MACHEOOOOOO")
 
 (function () {
   waitBeforeMainAnimation();

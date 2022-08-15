@@ -24,7 +24,6 @@ router.use(languageMiddleware)
 
 // pagine multilingua
 router.get('/', (req, res) => {
-  console.log("double callllll")
   languageSSR('index', req, res)
 });
 router.get('/progetti', (req, res) => {
@@ -34,7 +33,7 @@ router.get('/comingsoon', (req, res) => {
   languageSSR('comingsoon', req, res)
 });
 router.get('/chisiamo', (req, res) => {
-  sendPage(res, 'chisiamo')
+  languageSSR('chisiamo', req, res)
 });
 
 app.use('/', router);
