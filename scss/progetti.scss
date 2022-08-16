@@ -539,23 +539,26 @@ a.menu-item:hover {
     justify-content: center;
     gap: 1rem;
 
-    & > img {
+    & picture {
+      width: 50%;
+      &:first-child img {
+        top: unset;
+        left: unset;
+      }
+      &:last-child img {
+        bottom: unset;
+        right: unset;
+      }
+    }
+
+    & img {
       position: relative;
       display: inline-block;
-      width: 50%;
+      width: 100%;
       aspect-ratio: 3 / 2;
       object-fit: cover;
       box-shadow: -0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
       // display: block;
-
-      &:first-child {
-        top: unset;
-        left: unset;
-      }
-      &:last-child {
-        bottom: unset;
-        right: unset;
-      }
     }
   }
 }
