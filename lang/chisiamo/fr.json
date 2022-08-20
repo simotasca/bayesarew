@@ -1,6 +1,14 @@
 {
   "titolo-head": "Chi siamo",
 
+  "head-title": "A' props de nous - BayeSaRew",
+  "meta-description": "L’histoire du village de Gapassel et de son président. Membres de la coopérative Baye Sa Rew et des associations partenaires italiennes et internationales.",
+
+  "opengraph-title": "A' props de nous - BayeSaRew",
+  "opengraph-description": "L’histoire du village de Gapassel et de son président. Membres de la coopérative Baye Sa Rew et des associations partenaires italiennes et internationales.",
+
+  "twitter-content": "Baye Sa Rew: Développement agricole et social au Sénégal",
+
   "menu1": "HOME",
   "menu2": "A' PROPS DE NOUS",
   "menu3": "PROJETS",
@@ -9,7 +17,7 @@
 
   "titolo-slogan": "<span class=\"text-white\">A' PROPS</span> DE NOUS",
 
-  "titolo1": "NOTRE<span class=\"text-yellow\">PRESIDENT</span>",
+  "titolo1": "NOTRE <span class=\"text-yellow\">PRESIDENT</span>",
 
   "paragrafo1": "<span class=\"text-yellow\">Boukounta Mbaye</span>, 55 ans, est président et fondateur de la coopérative Baye Sa Rew. <br> Il a hérité des terres de Gapassel de son grand-père, avec la responsabilité de créer une communauté prospère pour soutenir les familles de la région. <br> Depuis 15 ans, il lutte contre <span class=\"text-l-blue\"> le problème de l’immigration</span> et promeut le travail agricole pour le développement et la croissance communautaire.",
 
